@@ -11,9 +11,9 @@
 /[Mm]emoryCaptures/
 
 # Not storing asset files in Github
-/[Aa]ssets/[Pp]refabs/
-/[Aa]ssets/[Ss]cenes/
+/[Aa]ssets/[Ll]ocal/
 /[Aa]ssets/[Ss]prites/
+/[Aa]ssets/[Ss]ounds/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -63,7 +63,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-
-Assets/Prefabs.meta
-Assets/Scenes.meta
+Assets/Local.meta
 Assets/Sprites.meta
+Assets/Sounds.meta
