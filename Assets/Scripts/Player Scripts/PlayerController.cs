@@ -49,6 +49,46 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Debug_1"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1f065a4-a308-4eb3-9d9e-4a066df37e42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Debug_2"",
+                    ""type"": ""Button"",
+                    ""id"": ""55e8f5e4-9bbe-4ec7-9923-4be39327b5e9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Debug_3"",
+                    ""type"": ""Button"",
+                    ""id"": ""40f1a3ca-0627-4a65-a4c2-9f345b185938"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Debug_4"",
+                    ""type"": ""Button"",
+                    ""id"": ""a20836be-0912-4bb7-8ce7-62954adab547"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Debug_5"",
+                    ""type"": ""Button"",
+                    ""id"": ""85541c7e-2925-4b79-9995-d49cc15fada3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -315,6 +355,61 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a010365-0718-4dfd-b5ea-b55f24a05187"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e3157f6-6c61-4ec9-b741-57ffd462029e"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5741281c-7489-4297-ad63-b905857fa593"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug_3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""32d0958e-88b7-4f09-8212-1df1308b5489"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug_4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fbe49b34-141a-4647-bfe1-adbb10addb65"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug_5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -372,6 +467,11 @@ public class @PlayerController : IInputActionCollection, IDisposable
         m_Player_Vertical = m_Player.FindAction("Vertical", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        m_Player_Debug_1 = m_Player.FindAction("Debug_1", throwIfNotFound: true);
+        m_Player_Debug_2 = m_Player.FindAction("Debug_2", throwIfNotFound: true);
+        m_Player_Debug_3 = m_Player.FindAction("Debug_3", throwIfNotFound: true);
+        m_Player_Debug_4 = m_Player.FindAction("Debug_4", throwIfNotFound: true);
+        m_Player_Debug_5 = m_Player.FindAction("Debug_5", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -425,6 +525,11 @@ public class @PlayerController : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Vertical;
     private readonly InputAction m_Player_Mouse;
     private readonly InputAction m_Player_Attack;
+    private readonly InputAction m_Player_Debug_1;
+    private readonly InputAction m_Player_Debug_2;
+    private readonly InputAction m_Player_Debug_3;
+    private readonly InputAction m_Player_Debug_4;
+    private readonly InputAction m_Player_Debug_5;
     public struct PlayerActions
     {
         private @PlayerController m_Wrapper;
@@ -433,6 +538,11 @@ public class @PlayerController : IInputActionCollection, IDisposable
         public InputAction @Vertical => m_Wrapper.m_Player_Vertical;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
+        public InputAction @Debug_1 => m_Wrapper.m_Player_Debug_1;
+        public InputAction @Debug_2 => m_Wrapper.m_Player_Debug_2;
+        public InputAction @Debug_3 => m_Wrapper.m_Player_Debug_3;
+        public InputAction @Debug_4 => m_Wrapper.m_Player_Debug_4;
+        public InputAction @Debug_5 => m_Wrapper.m_Player_Debug_5;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -454,6 +564,21 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                @Debug_1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_1;
+                @Debug_1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_1;
+                @Debug_1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_1;
+                @Debug_2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_2;
+                @Debug_2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_2;
+                @Debug_2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_2;
+                @Debug_3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_3;
+                @Debug_3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_3;
+                @Debug_3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_3;
+                @Debug_4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_4;
+                @Debug_4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_4;
+                @Debug_4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_4;
+                @Debug_5.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_5;
+                @Debug_5.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_5;
+                @Debug_5.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_5;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -470,6 +595,21 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @Debug_1.started += instance.OnDebug_1;
+                @Debug_1.performed += instance.OnDebug_1;
+                @Debug_1.canceled += instance.OnDebug_1;
+                @Debug_2.started += instance.OnDebug_2;
+                @Debug_2.performed += instance.OnDebug_2;
+                @Debug_2.canceled += instance.OnDebug_2;
+                @Debug_3.started += instance.OnDebug_3;
+                @Debug_3.performed += instance.OnDebug_3;
+                @Debug_3.canceled += instance.OnDebug_3;
+                @Debug_4.started += instance.OnDebug_4;
+                @Debug_4.performed += instance.OnDebug_4;
+                @Debug_4.canceled += instance.OnDebug_4;
+                @Debug_5.started += instance.OnDebug_5;
+                @Debug_5.performed += instance.OnDebug_5;
+                @Debug_5.canceled += instance.OnDebug_5;
             }
         }
     }
@@ -516,5 +656,10 @@ public class @PlayerController : IInputActionCollection, IDisposable
         void OnVertical(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnDebug_1(InputAction.CallbackContext context);
+        void OnDebug_2(InputAction.CallbackContext context);
+        void OnDebug_3(InputAction.CallbackContext context);
+        void OnDebug_4(InputAction.CallbackContext context);
+        void OnDebug_5(InputAction.CallbackContext context);
     }
 }

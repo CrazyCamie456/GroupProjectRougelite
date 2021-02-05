@@ -36,6 +36,46 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Debug_1",
+                    "type": "Button",
+                    "id": "d1f065a4-a308-4eb3-9d9e-4a066df37e42",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Debug_2",
+                    "type": "Button",
+                    "id": "55e8f5e4-9bbe-4ec7-9923-4be39327b5e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Debug_3",
+                    "type": "Button",
+                    "id": "40f1a3ca-0627-4a65-a4c2-9f345b185938",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Debug_4",
+                    "type": "Button",
+                    "id": "a20836be-0912-4bb7-8ce7-62954adab547",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Debug_5",
+                    "type": "Button",
+                    "id": "85541c7e-2925-4b79-9995-d49cc15fada3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -300,6 +340,61 @@
                     "processors": "",
                     "groups": "Mouse",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a010365-0718-4dfd-b5ea-b55f24a05187",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug_1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e3157f6-6c61-4ec9-b741-57ffd462029e",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug_2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5741281c-7489-4297-ad63-b905857fa593",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug_3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32d0958e-88b7-4f09-8212-1df1308b5489",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug_4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbe49b34-141a-4647-bfe1-adbb10addb65",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Debug_5",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
