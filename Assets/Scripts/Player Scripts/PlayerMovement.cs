@@ -52,6 +52,9 @@ public class PlayerMovement : MonoBehaviour
         if (directionAiming.x > 1 || directionAiming.y > 1)
         {
             directionAiming = (Camera.main.ScreenToWorldPoint(directionAiming) - transform.position).normalized;
-        }
+        } else
+		{
+			directionAiming.Normalize();
+		}
     }
 }
