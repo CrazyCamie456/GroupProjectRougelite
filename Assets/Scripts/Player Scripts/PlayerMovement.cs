@@ -51,7 +51,12 @@ public class PlayerMovement : MonoBehaviour
         //It is impossible for the mouse to be in world space and have a value less than 1 due to it being in "Screenspace" which only allows for integer values
         if (directionAiming.x > 1 || directionAiming.y > 1)
         {
-            directionAiming = (Camera.main.ScreenToWorldPoint(directionAiming) - transform.position).normalized;
-        }
+			directionAiming = Camera.main.ScreenToWorldPoint(directionAiming) - transform.position;
+			directionAiming.Normalize();
+		}
+		else
+		{
+			directionAiming.Normalize();
+		}
     }
 }
