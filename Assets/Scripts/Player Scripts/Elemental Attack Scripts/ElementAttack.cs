@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,5 +52,19 @@ public class ElementAttack : MonoBehaviour
 			elementalAttack.Attack(playerMovement.directionAiming);
 		}
 		currDelay -= Time.deltaTime;
+
+		//DEBUG SWAP ELEMENT
+		if (playerController.Player.Debug_1.ReadValue<float>() > 0.5f)
+		{
+			Type temp = elementalAttack.GetType();
+			Destroy(GetComponent(temp));
+			elementalAttack = gameObject.AddComponent<ElementFireAttack>();
+		}
+		if (playerController.Player.Debug_2.ReadValue<float>() > 0.5f)
+		{
+			Type temp = elementalAttack.GetType();
+			Destroy(GetComponent(temp));
+			elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
+		}
 	}
 }
