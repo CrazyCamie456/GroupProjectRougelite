@@ -44,9 +44,6 @@ public class PlayerMovement : MonoBehaviour
         //Right stick and mouse
         directionAiming = playerController.Player.Mouse.ReadValue<Vector2>();
 
-        //Left mouse button and left most face button
-        float Attack = playerController.Player.Attack.ReadValue<float>();
-
         //move the player
         rb.velocity += new Vector2(movementInputHorizontal, movementInputVertical) * speed;
 
@@ -55,14 +52,6 @@ public class PlayerMovement : MonoBehaviour
         if (directionAiming.x > 1 || directionAiming.y > 1)
         {
             directionAiming = (Camera.main.ScreenToWorldPoint(directionAiming) - transform.position).normalized;
-        }
-
-        //if the attack button is pressed
-        if (Attack>0.5)
-        {
-            //insert attack code here
-            Debug.Log(directionAiming);
-
         }
     }
 }
