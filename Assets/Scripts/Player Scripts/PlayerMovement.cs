@@ -56,12 +56,12 @@ public class PlayerMovement : MonoBehaviour
         {
             directionAiming = (Camera.main.ScreenToWorldPoint(directionAiming) - transform.position).normalized;
         }
-
+Debug.Log(directionAiming);
         //if the attack button is pressed
         if (Attack>0.5)
         {
             //insert attack code here
-            Debug.Log(directionAiming);
+            
 
         }
     }

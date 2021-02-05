@@ -39,7 +39,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""d6752d73-1fb1-40a8-b10c-da07dacd7387"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": ""StickDeadzone"",
+                    ""processors"": """",
                     ""interactions"": """"
                 },
                 {
@@ -167,7 +167,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""id"": ""6e00b3ca-6749-4c12-b881-41d21b2106db"",
                     ""path"": ""<DualShockGamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""groups"": ""DualShock 4"",
                     ""action"": ""Mouse"",
                     ""isComposite"": false,
@@ -178,7 +178,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""id"": ""5f04d6f7-81cd-40dc-acf0-6b1c0e892980"",
                     ""path"": ""<XInputController>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""groups"": ""Xbox"",
                     ""action"": ""Mouse"",
                     ""isComposite"": false,
