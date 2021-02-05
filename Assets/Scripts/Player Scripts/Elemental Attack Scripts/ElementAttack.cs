@@ -34,7 +34,7 @@ public class ElementAttack : MonoBehaviour
 	void Start()
 	{
 		playerMovement = GetComponent<PlayerMovement>();
-		elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
+		elementalAttack = gameObject.AddComponent<ElementFireAttack>();
 		baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
 	}
 
