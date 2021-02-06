@@ -20,6 +20,7 @@ public class ElementWaterAttack : MonoBehaviour, IElementalAttack
 		waterShot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		waterShot.GetComponent<DamageOnCollision>().Initialise("Enemy", 3);
 		waterShot.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
+		waterShot.GetComponent<SlowTargetOnHit>().Initialise("Enemy", 0.3f, 2.0f);
 	}
 
 	public float GetBaseAttackSpeed() { return attackSpeed; }

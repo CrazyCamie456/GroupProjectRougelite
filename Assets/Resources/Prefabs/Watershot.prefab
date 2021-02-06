@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9032296951414878346}
   - component: {fileID: -5919834225623565358}
   - component: {fileID: -1418035476751816452}
+  - component: {fileID: -4427864118321166949}
   m_Layer: 0
   m_Name: Watershot
   m_TagString: Untagged
@@ -149,3 +150,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLayers: []
+--- !u!114 &-4427864118321166949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240664107037744422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8822d1194f4d0794eb8359609aa6a773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayers: []
+  slowPotency: 0
+  slowDuration: 0
