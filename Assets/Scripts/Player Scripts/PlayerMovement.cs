@@ -7,12 +7,11 @@ public class PlayerMovement : MonoBehaviour
     //setting up public variables
     public Vector2 directionAiming;
     private Rigidbody2D rb;
-    public float speed = 10.0f;
     public Vector2 movementDirection;
     public bool isDashing;
     //Declare Private variable
     private PlayerController playerController;
-
+    private CombatStats combatStats;
     private void Awake()
     {
         playerController = new PlayerController();
@@ -29,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        combatStats = GetComponent<CombatStats>();
 
     }
 
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             directionAiming = playerController.Player.Mouse.ReadValue<Vector2>();
             //move the player
 
-            rb.velocity += movementDirection * speed;
+            rb.velocity += movementDirection * combatStats.movementSpeed;
         }
         //If the mouse position is greater than 1 then it is in world space
         //It is impossible for the mouse to be in world space and have a value less than 1 due to it being in "Screenspace" which only allows for integer values
