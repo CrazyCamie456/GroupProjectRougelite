@@ -19,6 +19,7 @@ public class Slow : MonoBehaviour
 			remainingDuration -= Time.deltaTime;
 		}
 		cs.bonusMovementSpeed += potency;
+		Destroy(this);
 	}
 
 	public void Initialise(float _potency, float _duration)
