@@ -59,12 +59,14 @@ public class ElementAttack : MonoBehaviour
 			Type temp = elementalAttack.GetType();
 			Destroy(GetComponent(temp));
 			elementalAttack = gameObject.AddComponent<ElementFireAttack>();
+			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
 		}
 		if (playerController.Player.Debug_2.ReadValue<float>() > 0.5f)
 		{
 			Type temp = elementalAttack.GetType();
 			Destroy(GetComponent(temp));
 			elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
+			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
 		}
 	}
 }
