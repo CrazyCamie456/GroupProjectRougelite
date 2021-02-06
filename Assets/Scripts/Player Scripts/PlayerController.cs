@@ -89,6 +89,14 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""a42d0701-b4b1-4f3e-9851-fa0f909d6fb4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -410,6 +418,50 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""action"": ""Debug_5"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd99d706-f093-4b47-8edc-ac2f37d9af63"",
+                    ""path"": ""<DualShockGamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""DualShock 4"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2f60e14d-71cf-45cd-a5e7-95f489750555"",
+                    ""path"": ""<XInputController>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f676afab-abb4-4131-bdf8-97f23e955f9c"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aaaf232e-088f-41fd-a1de-2665d36d51d4"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -472,6 +524,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         m_Player_Debug_3 = m_Player.FindAction("Debug_3", throwIfNotFound: true);
         m_Player_Debug_4 = m_Player.FindAction("Debug_4", throwIfNotFound: true);
         m_Player_Debug_5 = m_Player.FindAction("Debug_5", throwIfNotFound: true);
+        m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -530,6 +583,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Debug_3;
     private readonly InputAction m_Player_Debug_4;
     private readonly InputAction m_Player_Debug_5;
+    private readonly InputAction m_Player_Dash;
     public struct PlayerActions
     {
         private @PlayerController m_Wrapper;
@@ -543,6 +597,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         public InputAction @Debug_3 => m_Wrapper.m_Player_Debug_3;
         public InputAction @Debug_4 => m_Wrapper.m_Player_Debug_4;
         public InputAction @Debug_5 => m_Wrapper.m_Player_Debug_5;
+        public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -579,6 +634,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Debug_5.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_5;
                 @Debug_5.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_5;
                 @Debug_5.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDebug_5;
+                @Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -610,6 +668,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Debug_5.started += instance.OnDebug_5;
                 @Debug_5.performed += instance.OnDebug_5;
                 @Debug_5.canceled += instance.OnDebug_5;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
             }
         }
     }
@@ -661,5 +722,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
         void OnDebug_3(InputAction.CallbackContext context);
         void OnDebug_4(InputAction.CallbackContext context);
         void OnDebug_5(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }
