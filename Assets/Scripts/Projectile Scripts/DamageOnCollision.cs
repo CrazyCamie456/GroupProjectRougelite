@@ -24,7 +24,7 @@ public class DamageOnCollision : MonoBehaviour
 	{
 		if (targetLayers.Contains(collider.tag))
 		{
-			collider.GetComponent<EnemyHealth>().TakeDamage(damage);
+			collider.GetComponent<CombatStats>().TakeDamage(damage);
 		}
 	}
 }
