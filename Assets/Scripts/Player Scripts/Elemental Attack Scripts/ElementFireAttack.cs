@@ -20,6 +20,7 @@ public class ElementFireAttack : MonoBehaviour, IElementalAttack
 		fireball.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		fireball.GetComponent<DamageOnCollision>().Initialise("Enemy", 2);
 		fireball.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
+		fireball.GetComponent<BurnTargetOnHit>().Initialise("Enemy", 10, 1.0f, 5.0f);
 	}
 
 	public float GetBaseAttackSpeed() { return attackSpeed; }
