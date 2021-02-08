@@ -7,15 +7,18 @@ public class Dash : MonoBehaviour
 
     [HideInInspector] public bool invincibility;
     public float dashSpeed;
-    public int dashLimit;
+    public int maxDashLimit = 2;
 
+    private int dashLimit;
     private PlayerController playerController;
     private PlayerMovement playerMovement;
     private Rigidbody2D rb;
-    [SerializeField]
-    private float dashDelay;
-    [SerializeField]
+    private float maxDashDelay = 2.0f;
+    private float maxDashDuration = 0.1f;
     private float dashDuration;
+    private float dashDelay;
+
+    bool notHoldingDash = true;
 
     private void Awake()
     {
@@ -34,7 +37,9 @@ public class Dash : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        dashDuration = maxDashDuration;
+        dashDelay = maxDashDelay;
+        dashLimit = maxDashLimit;
     }
 
     void Update()
@@ -42,30 +47,37 @@ public class Dash : MonoBehaviour
         //Left shift, space and the right face button
         float dashInput = playerController.Player.Dash.ReadValue<float>();
 
-        if (dashDelay > 0)
+        if (dashDelay > 0.0f)
         {
             dashDelay -= Time.deltaTime;
         }
 
-        if (dashDelay < 0 && dashLimit < 2)
+        if (dashDelay < 0.0f && dashLimit < maxDashLimit)
         {
-            dashDelay = 2.0f;
+            dashDelay = maxDashDelay;
             dashLimit++;
         }
 
-        //check if the player has a dash avaliable, is currently not dashing and is trying to dash
-        if (dashLimit > 0 && dashDuration < 0 && dashInput > 0)
+        //check if the player has a dash avaliable, is currently not dashing and is trying to dash and is not holding the dash button down from the previous dash
+        if (dashLimit > 0 && dashDuration < 0.0f && dashInput > 0.0f && notHoldingDash)
         {
             //while the player dashes disable input
             playerMovement.isDashing = true;
             rb.velocity = playerMovement.movementDirection * dashSpeed;
-            dashDelay = 2.0f;
-            dashDuration = 0.1f;
+            dashDelay = maxDashDelay;
+            dashDuration = maxDashDuration;
             dashLimit--;
+            notHoldingDash = false;
+        }
+
+        //check if the player has released the dash button
+        if (dashInput < 1.0f)
+        {
+            notHoldingDash = true;
         }
 
         //after the player has dashed resume movement
-        if (dashDuration > 0)
+        if (dashDuration > 0.0f)
         {
             dashDuration -= Time.deltaTime;
         }
