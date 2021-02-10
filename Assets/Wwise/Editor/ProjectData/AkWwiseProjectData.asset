@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0224e8fbcbea9e1418b7fc3534dc99f0, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 34e0cbddbe1fd5469200e6918afd23c6
+    GuidInternal: 
+    m_lastTime: -8585888208622577013
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 334237adbf4dfc4b99b10db20ae7e79c
+    GuidInternal: 
+    m_lastTime: -8585888208623773799
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 20a0907f8b27dd43b86024c028cd8259
+    GuidInternal: 
+    m_lastTime: -8585886499114444869
+    List:
+    - name: Ambience
+      guid: c580a5809610b4478fc585f094fc4e4a
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 7
+      Path: Default Work Unit\Ambience
+    - name: Character
+      guid: b4ce901c302dc24f9202337f1c368ca3
+      id: 436743010
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character
+        ObjectType: 7
+      Path: Default Work Unit\Character
+  EventWwu:
+  - PhysicalPath: Events\Ambience.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Ambience
+      ObjectType: 12
+    ParentPath: Default Work Unit\Ambience
+    guid: 0145036126bceb4ab58872b0af928641
+    GuidInternal: 
+    m_lastTime: -8585888198594511097
+    List:
+    - name: Play_Cave_Ambience
+      guid: c8af46632b14b34b87a1901ea4cee698
+      id: 1911082204
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Cave_Ambience
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\Play_Cave_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Cave_Ambience
+      guid: 701cf768ad61274bbf96142112425b55
+      id: 221660262
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Stop_Cave_Ambience
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\Stop_Cave_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Character.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Character
+      ObjectType: 12
+    ParentPath: Default Work Unit\Character
+    guid: 9b3304f090732043875a076121eac862
+    GuidInternal: 
+    m_lastTime: -8585886499114265025
+    List:
+    - name: Play_Footstep
+      guid: 84876a6562ab02449baa4c6fa44173f0
+      id: 1602358412
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character
+        ObjectType: 12
+      - ElementName: Play_Footstep
+        ObjectType: 3
+      Path: Default Work Unit\Character\Play_Footstep
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 24988347e32c9f43a570031f0a04915b
+    GuidInternal: 
+    m_lastTime: -8585886499114504712
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 06afed215c4bd447a21b2d67a0b58d80
+    GuidInternal: 
+    m_lastTime: -8585888208623634188
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 7ad306cb799cc149b70af9a6c2220767
+    GuidInternal: 
+    m_lastTime: -8585888208623564375
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 614e5fce97881a42810ab87ded40d9ec
+    GuidInternal: 
+    m_lastTime: -8585888208623843638
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    ParentPath: Default Work Unit
+    guid: 30f370857cc6034690f0c7fdd61e959d
+    GuidInternal: 
+    m_lastTime: -8585888208622686721
+    List: []
+  ExpandedItems:
+  - /Group Project Wwise Session
+  - /Group Project Wwise Session/Events
+  - /Group Project Wwise Session/Events/Default Work Unit
+  - /Group Project Wwise Session/Events/Default Work Unit/Ambience
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
