@@ -12,7 +12,7 @@ public class DamagePlayer : MonoBehaviour
         combatStats = GetComponent<CombatStats>();
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionStay2D(Collision2D col)
     {
         //If colliding with the chosen tag
         if (col.gameObject.tag == collisionTag)
