@@ -9,11 +9,11 @@ public class Slow : MonoBehaviour
 	float duration;
 	float potency;
 
-	IEnumerator slowCoroutine()
+	IEnumerator SlowCoroutine()
 	{
 		cs.bonusMovementSpeed -= potency;
 		float remainingDuration = duration;
-		while (remainingDuration > 0)
+		while (remainingDuration > 0.0f)
 		{
 			yield return null;
 			remainingDuration -= Time.deltaTime;
@@ -27,6 +27,6 @@ public class Slow : MonoBehaviour
 		cs = GetComponent<CombatStats>();
 		potency = _potency;
 		duration = _duration;
-		StartCoroutine(slowCoroutine());
+		StartCoroutine(SlowCoroutine());
 	}
 }
