@@ -9,15 +9,7 @@ public class CombatStats : MonoBehaviour
 
 	public int maxHealth;
 	// Ensure the entity can never be healed to above their maximum health.
-	public int currentHealth
-	{
-		get
-		{
-			return pCurrentHealth;
-		}
-		set => pCurrentHealth = Mathf.Min(value, maxHealth);
-	}
-	private int pCurrentHealth;
+	public int currentHealth { get; protected set; }
 
 	public float baseMovementSpeed;
 	public float bonusMovementSpeed;
@@ -51,14 +43,40 @@ public class CombatStats : MonoBehaviour
 		return Guid.NewGuid();
 	}
 
+	// Base attack damage and attack speed should be managed by the specific attack,
+	// this means an enemy with multiple attack options could have different base damage or speed.
+	public float bonusAttackDamage;
+	public float bonusAttackSpeed;
+
+	// Stores and makes available whether the object is crowd controlled.
+	private List<Guid> crowdControlList;
+	public bool isCrowdControlled
+	{
+		get
+		{
+			return crowdControlList.Count > 0;
+		}
+	}
+	public void ApplyCrowdControl(Guid crowdControlID)
+	{
+		crowdControlList.Add(crowdControlID);
+	}
+	public void RemoveCrowdControl(Guid crowdControlID)
+	{
+		crowdControlList.Remove(crowdControlID);
+	}
+	// Just a helper function, centralizing the creation of Crowd Controls. Feel free to just use the NewGuid() function in your own code.
+	public Guid NewCrowdControlID()
+	{
+		return Guid.NewGuid();
+	}
+
 	public virtual void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
-		if (currentHealth < 0)
+		if (currentHealth <= 0)
 			Destroy(gameObject);
 	}
-
-
 
 	void Start()
 	{
@@ -66,11 +84,5 @@ public class CombatStats : MonoBehaviour
 		if (currentHealth == 0)
 			currentHealth = maxHealth;
 		crowdControlList = new List<Guid>();
-	}
-
-	private void Update()
-	{
-		if (gameObject.tag == "Enemy")
-			Debug.Log(isCrowdControlled);
 	}
 }
