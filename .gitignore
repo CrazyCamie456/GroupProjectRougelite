@@ -66,3 +66,6 @@ crashlytics-build.properties
 Assets/Local.meta
 Assets/Sprites.meta
 Assets/Sounds.meta
+
+Assets/AstarPathfindingProject/Editor/EditorAssets/
+Assets/AstarPathfindingProject/Editor/EditorAssets.meta
