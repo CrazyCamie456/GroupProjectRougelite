@@ -68,5 +68,19 @@ public class ElementAttack : MonoBehaviour
 			elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
 			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
 		}
+		if (playerController.Player.Debug_3.ReadValue<float>() > 0.5f)
+		{
+			Type temp = elementalAttack.GetType();
+			Destroy(GetComponent(temp));
+			elementalAttack = gameObject.AddComponent<ElementAirAttack>();
+			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+		}
+		if (playerController.Player.Debug_4.ReadValue<float>() > 0.5f)
+		{
+			Type temp = elementalAttack.GetType();
+			Destroy(GetComponent(temp));
+			elementalAttack = gameObject.AddComponent<ElementEarthAttack>();
+			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+		}
 	}
 }
