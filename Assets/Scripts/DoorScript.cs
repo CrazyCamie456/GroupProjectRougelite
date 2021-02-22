@@ -11,12 +11,11 @@ public class DoorScript : MonoBehaviour
 
 	static Guid roomChangeCC = new Guid();
 
-	public Vector2 currentRoomTargetPos;
-	public Vector2 otherRoomTargetPos;
+	public Vector2 nextRoomDirection;
+	private Vector2 roomSize = new Vector2(16.0f, 9.0f);
 	public float maxDoorLockout = 1.0f;
 	float doorLockout;
 	public bool isDoorLocked;
-	public Vector3 slideDir = new Vector3(4.0f, 0.0f, 0.0f);
 
 	IEnumerator DoorLockoutTimer()
 	{
@@ -39,12 +38,13 @@ public class DoorScript : MonoBehaviour
 
 	IEnumerator DoorPlayerSlide()
 	{
+		Vector3 nextRoomDir3 = new Vector3(nextRoomDirection.x, nextRoomDirection.y, 0.0f);
 		float elapsedTime = 0.0f;
 		playerCS.ApplyCrowdControl(roomChangeCC);
 		playerRB.simulated = false;
 		while (elapsedTime < 1.0f)
 		{
-			playerCS.transform.position += slideDir * Time.deltaTime;
+			playerCS.transform.position += nextRoomDir3 * 3.0f * Time.deltaTime;
 			if (elapsedTime < 0.5f)
 				playerCS.transform.localScale -= playerCS.transform.localScale * Time.deltaTime;
 			else
@@ -61,10 +61,7 @@ public class DoorScript : MonoBehaviour
 	{
 		if (collision.tag == "Player" && doorLockout < 0.0f && !isDoorLocked)
 		{
-			cc.targetPosition = otherRoomTargetPos;
-			Vector2 temp = otherRoomTargetPos;
-			otherRoomTargetPos = currentRoomTargetPos;
-			currentRoomTargetPos = temp;
+			cc.targetPosition += nextRoomDirection * roomSize;
 			StartCoroutine(DoorLockoutTimer());
 			StartCoroutine(DoorPlayerSlide());
 		}
