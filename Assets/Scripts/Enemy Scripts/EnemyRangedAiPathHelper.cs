@@ -8,10 +8,13 @@ public class EnemyRangedAiPathHelper : MonoBehaviour
 
     GameObject player;
     private AIPath aiPath;
+
+    public bool canFire = false;
+    public float range;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");   
+        player = GameObject.Find("Player");
         aiPath = GetComponent<AIPath>();
     }
 
@@ -25,27 +28,27 @@ public class EnemyRangedAiPathHelper : MonoBehaviour
         Vector3 directionNormalised = direction.normalized;
         float directionMagnitude = Vector3.Magnitude(direction);
 
-        if (directionMagnitude < 6.0f)
+        if (directionMagnitude < range)
         {
-        RaycastHit2D ray = Physics2D.RaycastAll(start, directionNormalised, directionMagnitude)[1];
-
-
-                Debug.Log(ray.collider);
-
-
-            
-                Debug.DrawRay(start, directionNormalised * directionMagnitude, Color.red);
+            RaycastHit2D ray = Physics2D.RaycastAll(start, directionNormalised, directionMagnitude)[1];
 
             if (ray.collider.tag == "Wall")
             {
                 aiPath.endReachedDistance = 0.2f;
+                canFire = false;
+
             }
             else
             {
-                aiPath.endReachedDistance = 6.0f;
-
+                aiPath.endReachedDistance = range;
+                canFire = true;
             }
         }
+        else
+        {
+            canFire = false;
+        }
+
 
 
 
