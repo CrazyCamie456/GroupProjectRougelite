@@ -12,6 +12,11 @@ public class DamagePlayer : MonoBehaviour
         combatStats = GetComponent<CombatStats>();
     }
 
+    public void Initialise(float _damage)
+    {
+        baseDamage = _damage;
+    }
+
     void OnCollisionStay2D(Collision2D col)
     {
         //If colliding with the chosen tag
