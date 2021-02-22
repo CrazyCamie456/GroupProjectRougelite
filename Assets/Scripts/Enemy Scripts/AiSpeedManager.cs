@@ -17,7 +17,7 @@ public class AiSpeedManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        aiPath.maxSpeed = combatStats.movementSpeed;
+
         if (combatStats.isCrowdControlled)
         {
             aiPath.canMove = false;

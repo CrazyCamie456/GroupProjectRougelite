@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 
 public class EnemyRangedAttack : MonoBehaviour
 {
-    private AIPath aiPath;
     private EnemyRangedAiPathHelper rangedAiPath;
     GameObject player;
 
@@ -14,36 +12,27 @@ public class EnemyRangedAttack : MonoBehaviour
     public float setChargeAttackTime;
     private float chargeAttackTime = 0.0f;
     public float spearSpeed;
-    // Start is called before the first frame update
+
+    private CombatStats combatStats;
+
     void Start()
     {
-        aiPath = GetComponent<AIPath>();
+        combatStats = GetComponent<CombatStats>();
+
         rangedAiPath = GetComponent<EnemyRangedAiPathHelper>();
         spearPrefab = Resources.Load<GameObject>("Prefabs/Spear");
         player = GameObject.Find("Player");
 
-
     }
 
-    /* to attack:
-     * 
-     * stop moving - aiPath.canMove = false;
-     * change attack
-     * fire attack
-     * start moving - aiPath.canMove = true;
-     * 
-     */
+            System.Guid myGUID = System.Guid.NewGuid();
 
 
-
-
-
-    // Update is called once per frame
     void Update()
     {
         if (rangedAiPath.canFire)
         {
-            aiPath.canMove = false;
+            combatStats.ApplyCrowdControl(myGUID);
             if (chargeAttackTime < 0)
             {
 
@@ -61,7 +50,7 @@ public class EnemyRangedAttack : MonoBehaviour
 
 
                 chargeAttackTime = setChargeAttackTime;
-                aiPath.canMove = true;
+                combatStats.RemoveCrowdControl(myGUID);
             }
             else
             {
