@@ -3,13 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Element
+{
+	None = 0,
+	Fire,
+	Water,
+	Earth,
+	Air
+};
+
 public class ElementAttack : MonoBehaviour
 {
-	public IElementalAttack elementalAttack;
+	const int DEBUG_MAX_ELEMENTS = 1;
 
-	public float projectileSpeed = 10.0f;
+	public IElementalAttack elementalAttack;
+	[HideInInspector]
+	public List<Element> elements;
+
 	// In attacks per second.
-	public float baseAttackSpeed = 1.0f;
+	public float baseAttackSpeed { get; private set; }
 
 	// Runtime variables
 	float fireDelay = 0.0f;
@@ -35,7 +47,68 @@ public class ElementAttack : MonoBehaviour
 	void Start()
 	{
 		playerMovement = GetComponent<PlayerMovement>();
-		elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
+		elements = new List<Element>();
+		for (int i = 0; i < DEBUG_MAX_ELEMENTS; i++)
+		{
+			elements.Add(Element.None);
+		}
+
+		elementalAttack = gameObject.AddComponent<ElementNoneAttack>();
+		baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+	}
+
+	// Returns whether the element was successfully added.
+	public bool AddElement(Element e)
+	{
+		bool succeeded = false;
+		if (elements[0] == Element.None)
+		{
+			elements[0] = e;
+			succeeded = true;
+		}
+		if (DEBUG_MAX_ELEMENTS > 1 && elements[1] == Element.None)
+		{
+			elements[1] = e;
+			succeeded = true;
+		}
+		if (DEBUG_MAX_ELEMENTS > 2 && elements[2] == Element.None)
+		{
+			elements[2] = e;
+			succeeded = true;
+		}
+		if (!succeeded)
+			Debug.Log("Player has max elements, adding more failed.");
+		UpdateElement();
+		return succeeded;
+	}
+
+	void UpdateElement()
+	{
+		if (elements.Count == 0) return;
+		Type temp = elementalAttack.GetType();
+		Destroy(GetComponent(temp));
+
+		switch (elements[0])
+		{
+			case Element.None:
+				elementalAttack = gameObject.AddComponent<ElementNoneAttack>();
+				break;
+			case Element.Fire:
+				elementalAttack = gameObject.AddComponent<ElementFireAttack>();
+				break;
+			case Element.Water:
+				elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
+				break;
+			case Element.Earth:
+				elementalAttack = gameObject.AddComponent<ElementEarthAttack>();
+				break;
+			case Element.Air:
+				elementalAttack = gameObject.AddComponent<ElementAirAttack>();
+				break;
+			default:
+				elementalAttack = gameObject.AddComponent<ElementNoneAttack>();
+				break;
+		}
 		baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
 	}
 
@@ -56,31 +129,29 @@ public class ElementAttack : MonoBehaviour
 		//DEBUG SWAP ELEMENT
 		if (playerController.Player.Debug_1.ReadValue<float>() > 0.5f)
 		{
-			Type temp = elementalAttack.GetType();
-			Destroy(GetComponent(temp));
-			elementalAttack = gameObject.AddComponent<ElementFireAttack>();
-			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+			elements[0] = Element.Fire;
+			UpdateElement();
 		}
 		if (playerController.Player.Debug_2.ReadValue<float>() > 0.5f)
 		{
-			Type temp = elementalAttack.GetType();
-			Destroy(GetComponent(temp));
-			elementalAttack = gameObject.AddComponent<ElementWaterAttack>();
-			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+			elements[0] = Element.Water;
+			UpdateElement();
 		}
 		if (playerController.Player.Debug_3.ReadValue<float>() > 0.5f)
 		{
-			Type temp = elementalAttack.GetType();
-			Destroy(GetComponent(temp));
-			elementalAttack = gameObject.AddComponent<ElementAirAttack>();
-			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+			elements[0] = Element.Earth;
+			UpdateElement();
 		}
 		if (playerController.Player.Debug_4.ReadValue<float>() > 0.5f)
 		{
-			Type temp = elementalAttack.GetType();
-			Destroy(GetComponent(temp));
-			elementalAttack = gameObject.AddComponent<ElementEarthAttack>();
-			baseAttackSpeed = elementalAttack.GetBaseAttackSpeed();
+			elements[0] = Element.Air;
+			UpdateElement();
 		}
+		if (playerController.Player.Debug_5.ReadValue<float>() > 0.5f)
+		{
+			elements[0] = Element.None;
+			UpdateElement();
+		}
+
 	}
 }
