@@ -9,15 +9,17 @@ public class AiSpeedManager : MonoBehaviour
     private AIPath aiPath;
     private CombatStats combatStats;
 
-    void Awake(){
+    void Start(){
         aiPath = GetComponent<AIPath>();
         combatStats = GetComponent<CombatStats>();
+
+        aiPath.maxSpeed = combatStats.baseMovementSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        aiPath.maxSpeed = combatStats.movementSpeed;
+        aiPath.maxSpeed = combatStats.baseMovementSpeed * Mathf.Max(1 + combatStats.bonusMovementSpeed,0);
         if (combatStats.isCrowdControlled)
         {
             aiPath.canMove = false;
