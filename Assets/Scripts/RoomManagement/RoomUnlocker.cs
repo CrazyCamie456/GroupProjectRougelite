@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomUnlocker : MonoBehaviour
+public class RoomUnlocker : MonoBehaviour, IRoomUnlocker
 {
 	public List<GameObject> checks;
 	Coroutine cr;

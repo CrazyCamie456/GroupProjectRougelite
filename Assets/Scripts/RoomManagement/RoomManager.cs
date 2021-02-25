@@ -6,7 +6,7 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour
 {
 	[SerializeField] private DoorScript[] doors;
-	[SerializeField] private RoomUnlocker ru;
+	[SerializeField] private IRoomUnlocker ru;
 	[SerializeField] private bool isCurrentRoom
 	{
 		get { return pIsCurrentRoom; }
@@ -64,13 +64,8 @@ public class RoomManager : MonoBehaviour
 
 	void Start()
 	{
-		TryGetComponent(out ru);
+		ru = GetComponent<IRoomUnlocker>();
 		doors = GetComponentsInChildren<DoorScript>();
 		isCurrentRoom = gameObject.name == "StartingRoom";
-	}
-
-	void Update()
-	{
-
 	}
 }
