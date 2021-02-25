@@ -57,6 +57,11 @@ public class EnemyRangedAttack : MonoBehaviour
                 chargeAttackTime -= Time.deltaTime;
             }
         }
+        else
+        {
+            combatStats.RemoveCrowdControl(myGUID);
+
+        }
     }
 
 }
