@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// ELEMENTS 0-5 MUST ALWAYS REMAIN NONE, FIRE, WATER, EARTH, AIR - they are being used for randomly generating base elements using unchecked typecasting.
+// Elements 6+ (if they exist) can change order as needed - any comparisons should use this enum.
 public enum Element
 {
 	None = 0,

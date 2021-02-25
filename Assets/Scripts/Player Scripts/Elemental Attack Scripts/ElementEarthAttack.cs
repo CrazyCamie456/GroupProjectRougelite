@@ -16,7 +16,7 @@ public class ElementEarthAttack : MonoBehaviour, IElementalAttack
 
 	public void Attack(Vector2 direction)
 	{
-		GameObject earthshot = Instantiate(airshotPrefab, transform.position, ProjectileHelperFunctions.RotateToFace(direction));
+		GameObject earthshot = Instantiate(airshotPrefab, transform.position, Quaternion.identity);
 		earthshot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		earthshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 6);
 		earthshot.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
