@@ -9,7 +9,12 @@ public class CombatStats : MonoBehaviour
 
 	public int maxHealth;
 	// Ensure the entity can never be healed to above their maximum health.
-	public int currentHealth { get; protected set; }
+	public int currentHealth
+	{
+		get { return pCurrentHealth; }
+		set { pCurrentHealth = Mathf.Min(maxHealth, value); }
+	}
+	private int pCurrentHealth;
 
 	public float baseMovementSpeed;
 	public float bonusMovementSpeed;
@@ -43,6 +48,10 @@ public class CombatStats : MonoBehaviour
 		return Guid.NewGuid();
 	}
 
+	public virtual void Heal(int healing)
+	{
+		currentHealth += healing;
+	}
 
 	public virtual void TakeDamage(int damage)
 	{

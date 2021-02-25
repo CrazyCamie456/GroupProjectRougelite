@@ -31,14 +31,17 @@ public class DoorScript : MonoBehaviour
 	public Sprite open;
 	public Sprite closed;
 
+	void Awake()
+	{
+		sr = GetComponent<SpriteRenderer>();
+	}
+
 	void Start()
 	{
 		cc = Camera.main.GetComponent<CameraController>();
-
 		GameObject temp = GameObject.Find("Player");
 		playerRB = temp.GetComponent<Rigidbody2D>();
 		playerCS = temp.GetComponent<CombatStats>();
-		sr = GetComponent<SpriteRenderer>();
 	}
 
 	IEnumerator DoorPlayerSlide()
