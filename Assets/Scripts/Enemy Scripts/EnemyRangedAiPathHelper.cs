@@ -31,7 +31,8 @@ public class EnemyRangedAiPathHelper : MonoBehaviour
         if (directionMagnitude < range)
         {
             RaycastHit2D ray = Physics2D.RaycastAll(start, directionNormalised, directionMagnitude)[1];
-
+            Debug.DrawRay(start, destination, Color.green);
+            Debug.Log(ray.collider.tag);
             if (ray.collider.tag == "Wall")
             {
                 aiPath.endReachedDistance = 0.2f;
