@@ -41,12 +41,39 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 2810863195
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
+  - name: Ground
+    uniqueID: 1929275687
+    locked: 0
+  - name: Walls
+    uniqueID: 1525763779
+    locked: 0
+  - name: Pits
+    uniqueID: 701988939
+    locked: 0
+  - name: Doors
+    uniqueID: 1632061613
+    locked: 0
+  - name: Corpses
+    uniqueID: 563814951
+    locked: 0
+  - name: Pickups
+    uniqueID: 300032325
+    locked: 0
+  - name: Enemies
+    uniqueID: 644990645
+    locked: 0
+  - name: Player
+    uniqueID: 3894853889
+    locked: 0
+  - name: DoorFrames
+    uniqueID: 3114593871
+    locked: 0
+  - name: Projectiles
     uniqueID: 1709502011
+    locked: 0
+  - name: UI
+    uniqueID: 2810863195
     locked: 0
