@@ -32,7 +32,7 @@ public class HealthManager : MonoBehaviour
         }
         else
         {
-            maxHeartCount = (int)Mathf.Ceil(combatStats.maxHealth / 2.0f);
+            maxHeartCount = (int)Mathf.Ceil(combatStats.maxHealth / 2.0f)-1;
         }
         for (int i = 0; i < hearts.Length; i++)
         {
