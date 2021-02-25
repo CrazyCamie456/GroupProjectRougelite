@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
 
 	void Update()
     {
-		transform.position = Vector2.Lerp(transform.position, targetPosition, Time.deltaTime * movementSpeed);
+		transform.position = Vector2.Lerp(transform.position, targetPosition, Time.unscaledDeltaTime * movementSpeed);
 		transform.position = new Vector3(transform.position.x, transform.position.y, -10.0f);
     }
 }
