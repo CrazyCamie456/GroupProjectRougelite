@@ -30,6 +30,7 @@ public class DoorScript : MonoBehaviour
 	private bool pIsDoorLocked;
 	public Sprite open;
 	public Sprite closed;
+	static float lastDoorTime;
 
 	void Awake()
 	{
@@ -69,11 +70,13 @@ public class DoorScript : MonoBehaviour
 		Time.timeScale = 1.0f;
 	}
 
-	void OnTriggerEnter2D(Collider2D collision)
+	void OnTriggerStay2D(Collider2D collision)
 	{
-		if (collision.tag == "Player" && !isDoorLocked)
+		// This just needs to guarantee the player doesn't exit a room and return into it the next frame.
+		if (collision.tag == "Player" && !isDoorLocked && Time.time - lastDoorTime > Time.deltaTime + 0.00001f)
 		{
 			cc.targetPosition += nextRoomDirection * roomSize;
+			lastDoorTime = Time.time;
 			nextRoom.EnterRoom();
 			StartCoroutine(DoorPlayerSlide());
 		}
