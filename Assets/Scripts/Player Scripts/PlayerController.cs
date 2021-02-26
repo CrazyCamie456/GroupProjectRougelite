@@ -97,6 +97,14 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""e6cada66-2f4c-4c25-b349-004dcd67c596"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -462,6 +470,39 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5bb49a9-f749-4bbd-a868-6b0468978b88"",
+                    ""path"": ""<DualShockGamepad>/touchpadButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""DualShock 4"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""14065025-b79e-435a-96f2-f220d96824fd"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df3032ce-1185-4369-b0f3-d47a3e5e36b0"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -525,6 +566,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         m_Player_Debug_4 = m_Player.FindAction("Debug_4", throwIfNotFound: true);
         m_Player_Debug_5 = m_Player.FindAction("Debug_5", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
+        m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -584,6 +626,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Debug_4;
     private readonly InputAction m_Player_Debug_5;
     private readonly InputAction m_Player_Dash;
+    private readonly InputAction m_Player_Escape;
     public struct PlayerActions
     {
         private @PlayerController m_Wrapper;
@@ -598,6 +641,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         public InputAction @Debug_4 => m_Wrapper.m_Player_Debug_4;
         public InputAction @Debug_5 => m_Wrapper.m_Player_Debug_5;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
+        public InputAction @Escape => m_Wrapper.m_Player_Escape;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -637,6 +681,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                @Escape.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
+                @Escape.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
+                @Escape.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -671,6 +718,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @Escape.started += instance.OnEscape;
+                @Escape.performed += instance.OnEscape;
+                @Escape.canceled += instance.OnEscape;
             }
         }
     }
@@ -723,5 +773,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
         void OnDebug_4(InputAction.CallbackContext context);
         void OnDebug_5(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }
