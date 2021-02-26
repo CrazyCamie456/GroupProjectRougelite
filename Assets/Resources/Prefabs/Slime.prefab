@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 9195454135748114905}
   - component: {fileID: 9195454135748114904}
   - component: {fileID: 9195454135748114911}
+  - component: {fileID: -2941027583673082490}
+  - component: {fileID: 6287485982642107088}
+  - component: {fileID: -1763031224651923527}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -182,6 +185,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceccdc7662014040afb1272b8951ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2941027583673082490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195454135748114855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c539cb8ae10a3bd4c91d8fcdad6281a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6287485982642107088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195454135748114855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba643e5d7344a44d97c1010c7fa1f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 3
+  setChargeAttackTime: 0.8
+  attackSpeed: 5
+  SetAttackDuration: 1
+  setAttackCoolDown: 0.8
+  setAttackDelay: 0
+--- !u!114 &-1763031224651923527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195454135748114855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2165f7eedf46764b92a7a79f6c10a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 1
 --- !u!1 &9195454137233140925
 GameObject:
   m_ObjectHideFlags: 0
