@@ -11,10 +11,8 @@ public class PlayerCombatStats : CombatStats
     {
         if (iFrames < 0)
         {
-            currentHealth -= damage;
-            if (currentHealth < 0)
-                Destroy(gameObject);
-            iFrames = setIFrames;
+			base.TakeDamage(damage);
+			iFrames = setIFrames;
             StartCoroutine(ReduceIFrames());
         }
     }
