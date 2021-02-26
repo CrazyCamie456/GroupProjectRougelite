@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         combatStats = GetComponent<CombatStats>();
-
     }
 
     void Update()

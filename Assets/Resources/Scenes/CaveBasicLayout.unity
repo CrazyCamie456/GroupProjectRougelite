@@ -2712,6 +2712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5737107677205263759, guid: 1504bed0119e9604f96f9bdb9fea4d03,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1504bed0119e9604f96f9bdb9fea4d03, type: 3}
 --- !u!4 &873517929 stripped
@@ -3003,6 +3008,7 @@ GameObject:
   - component: {fileID: 956943603}
   - component: {fileID: 956943602}
   - component: {fileID: 956943605}
+  - component: {fileID: 956943606}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3089,6 +3095,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0}
   movementSpeed: 6
+--- !u!114 &956943606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956943601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bd6cff1194e6d43b137a0fdd8a45d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1032778912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4473,7 +4491,7 @@ PrefabInstance:
     - target: {fileID: 8924519214183176995, guid: 231fba970e8b16f43916c411ddcc045a,
         type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAAAAIexzJUAwVwIAAPgEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2P2jAQ/SvI57IKNAGltxZYtgcWtLTaSy4mniQWjh3ZzvKx4r937CQkpeoJM/Nm/N6bcT4Jl6aC1Cq91pxtFAPybUTcmXwZ9ckXONNcyT2/Qod558wWDkQ95o1arjA+cWVGlWA1T7/LXDhwgMFa8kzpcsVyWChjDYYzKgxgSivrqiWGPkfkjD/j2JVc8DSdu9MVT3EwuuExBWlB99DJrEWOw6eohTbIWqaClhUwR7sviLrWYQOTKKhFOPKpEoKblg2xl8qr3VcFaHByGacozjMInmIMFMDzwjqqw+ptlhmwrXZNL0uu0aWmLfmhGutKao4NsQ8qanfRNJp5Uk3TzT/58cSnM63Kl+7eSeDusAVPj2/0klJjB94Ow8ue+sT7c6LiSA8C3guQr2qtVS0ZJq2uXWltYLrs/96lLQpIj328ofoQrKve8M7vbpBOw82rPy8ELw/eybAJ7IXyhvv5g8bR/ETCfjtM2wKjjsVvA79oPlyjNvHMtbGYalVKR++gau2gZOU9c2pqu1Bagh52qEBSYS877GMfZ/iQ+3/VM3Uvpr29zXUP4aHEh3t8EDykdup0n5Yp1GkDptjWVnAJvdUu8YpGLZSUzYoNJXVl+1pnNB2U5TVnf+8WCQ7xfPp1HmdxFE7nUTg+xGEcsXg+T2kQzaYR8cvHJeqkYtcQbe3Bscm+ucRF6z4ko7WmlV93pulpza+lMj2Sy0ztUw0gt02HO3HQeAm+S7ZiHA3ag7Vc+oGTz4QIlR6BJfdGiVe6OltNk75LQir+oayLJGThvxwJuZHbH1BLAwQUAAAICAAAACHs61biCW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kkGSpbmRsbllmqWpiZG5qYlukqWJpWmKpbl5cqKBqZmRqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAACHscyVAMFcCAAD4BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAACHs61biCW0AAAB4AAAACQAkAAAAAAAAAAAAAACkAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFwDAAAAAA==
+      value: UEsDBBQAAAgIAAAAIewKN9aDVwIAAPoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2P2jAQ/SvI57IKlIDSWwss2wMLWlrtJRcTTxILx45sZ/lY8d87dhKSpuoJ896b8ZsP55NwaUpIrNIbzdlWMSDfRsSdyZdRR77AhWZKHvgNWs07ZzZ3Iuo1b9RyhfjEhRlVgNU8+S4z4cQBgpXkqdLFmmWwVMYahFMqDCCllXXREqHPEbngzzhyIVc8TRfudMNTFIzueExAWtCddDJvlOPZU9hIa2UlE0GLEpiz3QWEbepZLZNYUKNw5hMlBDeNG2Kvpa/2UOagwZXLOMXivIPgKUIgB57l1lntR+/S1IBtatf0uuIau1SnJT9U3bqCmlNt7IOKyl00DefeVJ10+w8/nng61ap4ae+dBO4Om/Pk9EavCTW219s+vOqsT3x/zlSc6FHAew7yVW20qiRD0urKhVYGpqvu76O0ZQ7JqcNrqwOwKruGt/1uB+lquPvqL0vBi6Pv5KwGDkL5hvv5g8bR/ETDfjtMkwJR5+K3gV80669RQzxzbSxSTZXS2TuqSjspWfueuWoqu1Ragu5nKEFSYa97zGOHMxxw/496pu7FNLc3XPsQBiEe7vRBMKD26vyYlsnVeQsm31VWcNlP5phX7NRSSVnvmBmwLu5Q6ZQm/bis4uzv7SLBMVpMvy6iNApn00U4Gx+jWRSyaLFIaBDOpyHx68clVkrFvrbaNAgHJ7sFkLhq7adktNG09AvPND1v+K1QplNymapDogHkrs7wcA4aL8GXydaMY4sOYC2XfuTkMyZCJSdg8SNR7EtdX6ymcZclJiX/UNYhMVn6b0dM7uT+B1BLAwQUAAAICAAAACHs61biCW0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kkGSpbmRsbllmqWpiZG5qYlukqWJpWmKpbl5cqKBqZmRqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAACHsCjfWg1cCAAD6BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAACHs61biCW0AAAB4AAAACQAkAAAAAAAAAAAAAACkAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFwDAAAAAA==
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 231fba970e8b16f43916c411ddcc045a, type: 3}
