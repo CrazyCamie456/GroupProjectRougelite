@@ -67,10 +67,10 @@ public class ChargedAttacks : MonoBehaviour
        
         //fire enemy attack here
         Vector3 attackDistance = playerPosition - transform.position;
-        Vector3 attackVelocity = attackDistance/ attackDuration;
+        Vector3 attackVelocity = (attackDistance/ attackDuration).normalized;
         float tempSpeedModifier = (1.0f + Mathf.Min(combatStats.bonusMovementSpeed, 0.0f));
         float speedmodifier = Mathf.Max(0.0f, tempSpeedModifier);
-        GetComponent<Rigidbody2D>().velocity = attackVelocity* speedmodifier;
+        GetComponent<Rigidbody2D>().velocity = attackVelocity* speedmodifier*attackSpeed;
         while (attackDuration>0.0f)
         {
             Debug.Log("attack");

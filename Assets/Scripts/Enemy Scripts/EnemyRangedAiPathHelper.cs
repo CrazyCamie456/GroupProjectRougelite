@@ -30,19 +30,22 @@ public class EnemyRangedAiPathHelper : MonoBehaviour
 
         if (directionMagnitude < range)
         {
-            RaycastHit2D ray = Physics2D.RaycastAll(start, directionNormalised, directionMagnitude)[1];
-            Debug.DrawRay(start, destination, Color.green);
-            Debug.Log(ray.collider.tag);
-            if (ray.collider.tag == "Wall")
+            RaycastHit2D[] ray = Physics2D.RaycastAll(start, directionNormalised, directionMagnitude);
+            for (int i = 0; i < ray.Length; i++)
             {
-                aiPath.endReachedDistance = 0.2f;
-                canFire = false;
 
-            }
-            else
-            {
-                aiPath.endReachedDistance = range;
-                canFire = true;
+
+                if (ray[i].collider.tag == "Wall")
+                {
+                    aiPath.endReachedDistance = 0.2f;
+                    canFire = false;
+                    break;
+                }
+                else
+                {
+                    aiPath.endReachedDistance = range;
+                    canFire = true;
+                }
             }
         }
         else
@@ -50,8 +53,8 @@ public class EnemyRangedAiPathHelper : MonoBehaviour
             canFire = false;
         }
 
+        }
 
 
-
-    }
+    
 }
