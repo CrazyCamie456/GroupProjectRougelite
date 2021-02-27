@@ -11,12 +11,10 @@ public class HealthManager : MonoBehaviour
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
-    GameObject player;
     private CombatStats combatStats;
     bool halfHeartNeeded = false;
     void Start()
     {
-        player = GameObject.Find("Player");
         combatStats = GameObject.Find("Player").GetComponent<CombatStats>();
 
     }
