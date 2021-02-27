@@ -14,6 +14,8 @@
 /[Aa]ssets/[Ll]ocal/
 /[Aa]ssets/[Ss]prites/
 /[Aa]ssets/[Ss]ounds/
+/[Aa]ssets/[Ww][Ww]ise[Ss]ettings.xml
+/[Aa]ssets/[Ww][Ww]ise[Ss]ettings.xml.meta
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -69,3 +71,7 @@ Assets/Sounds.meta
 
 Assets/AstarPathfindingProject/Editor/EditorAssets/
 Assets/AstarPathfindingProject/Editor/EditorAssets.meta
+
+logRunSetup.txt
+WwiseUnityIntegration_Mac_Src.zip
+WwiseUnityIntegration_Windows_Src.zip
