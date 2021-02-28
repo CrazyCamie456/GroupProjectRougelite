@@ -59,7 +59,7 @@ public class ChargedAttacks : MonoBehaviour
 
         while (chargeAttackTime > 0.0f)
         {
-            Debug.Log("charge");
+
 
             yield return null;
             chargeAttackTime -= Time.deltaTime;
@@ -73,7 +73,6 @@ public class ChargedAttacks : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = attackVelocity* speedmodifier*attackSpeed;
         while (attackDuration>0.0f)
         {
-            Debug.Log("attack");
             yield return null;
 
             attackDuration -= Time.deltaTime;
@@ -83,7 +82,6 @@ public class ChargedAttacks : MonoBehaviour
         
         while (attackCoolDown > 0.0f)
         {
-            Debug.Log("cooldown");
             yield return null;
             attackCoolDown -= Time.deltaTime;
         }
