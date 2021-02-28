@@ -18,7 +18,7 @@ public class ElementWaterAttack : MonoBehaviour, IElementalAttack
 	{
 		GameObject waterShot = Instantiate(waterShotPrefab, transform.position, ProjectileHelperFunctions.RotateToFace(direction));
 		waterShot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-		waterShot.GetComponent<DamageOnCollision>().Initialise("Enemy", 3);
+		waterShot.GetComponent<DamageOnCollision>().Initialise("Enemy", 6);
 		waterShot.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
 		waterShot.GetComponent<SlowTargetOnHit>().Initialise("Enemy", 0.3f, 2.0f);
 	}

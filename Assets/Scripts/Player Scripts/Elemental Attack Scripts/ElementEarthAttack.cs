@@ -6,7 +6,7 @@ public class ElementEarthAttack : MonoBehaviour, IElementalAttack
 {
 	// Compile time semi-static variables.
 	GameObject airshotPrefab;
-	float projectileSpeed = 4.0f;
+	float projectileSpeed = 15.0f;
 	float attackSpeed = 1.0f;
 
 	void Start()
@@ -18,9 +18,9 @@ public class ElementEarthAttack : MonoBehaviour, IElementalAttack
 	{
 		GameObject earthshot = Instantiate(airshotPrefab, transform.position, Quaternion.identity);
 		earthshot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-		earthshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 6);
+		earthshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 15);
 		earthshot.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
-		earthshot.GetComponent<KnockbackTargetOnHit>().Initialise("Enemy", 0.2f, 0.6f);
+		earthshot.GetComponent<KnockbackTargetOnHit>().Initialise("Enemy", 0.1f, 0.8f);
 	}
 
 	public float GetBaseAttackSpeed() { return attackSpeed; }

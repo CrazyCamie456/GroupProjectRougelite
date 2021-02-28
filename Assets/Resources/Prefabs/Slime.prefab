@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9c3d995464d6746a37da3a9131902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 20
   baseMovementSpeed: 2
   bonusMovementSpeed: 0
   bonusAttackDamage: 0
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 3
   setChargeAttackTime: 0.8
-  attackSpeed: 5
-  SetAttackDuration: 1
+  attackSpeed: 7
+  SetAttackDuration: 0.5
   setAttackCoolDown: 0.8
   setAttackDelay: 0
 --- !u!114 &-1763031224651923527

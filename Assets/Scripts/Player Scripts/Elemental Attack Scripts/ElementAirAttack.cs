@@ -6,8 +6,8 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 {
 	// Compile time semi-static variables.
 	GameObject airshotPrefab;
-	float projectileSpeed = 5.0f; //20.0f;
-	float attackSpeed = 10.0f;
+	float projectileSpeed = 20.0f; //20.0f;
+	float attackSpeed = 5.0f;
 
 	void Start()
 	{
@@ -19,7 +19,7 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 		GameObject airshot = Instantiate(airshotPrefab, transform.position, ProjectileHelperFunctions.RotateToFace(direction));
 		airshot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		airshot.GetComponent<Rigidbody2D>().angularVelocity = 1440.0f;
-		airshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 1);
+		airshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 2);
 		airshot.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
 	}
 

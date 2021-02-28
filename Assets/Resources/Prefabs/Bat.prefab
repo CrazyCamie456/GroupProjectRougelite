@@ -73,8 +73,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.5}
-  m_Direction: 0
+  m_Size: {x: 1.37, y: 0.75}
+  m_Direction: 1
 --- !u!114 &5747908866711399754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575b8e9b14ac17046a5850376cad2017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agroRange: 4
+  agroRange: 6
   activeSprite: {fileID: 21300000, guid: 7bf057d8d7f38d54986a932159950af6, type: 3}
   sleepSprite: {fileID: 21300000, guid: f1b063187021d0b4bbb752bbee400bee, type: 3}
 --- !u!114 &2965128342527691208

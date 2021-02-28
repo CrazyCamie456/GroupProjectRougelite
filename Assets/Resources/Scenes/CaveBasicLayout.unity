@@ -1579,10 +1579,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 806291521}
     m_Modifications:
+    - target: {fileID: 6287485982642107088, guid: 65a1f1250156ebf4b84f0ea296798e3b,
+        type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9195454135748114854, guid: 65a1f1250156ebf4b84f0ea296798e3b,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195454135748114854, guid: 65a1f1250156ebf4b84f0ea296798e3b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195454135748114854, guid: 65a1f1250156ebf4b84f0ea296798e3b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9195454135748114854, guid: 65a1f1250156ebf4b84f0ea296798e3b,
         type: 3}
@@ -1642,7 +1657,7 @@ PrefabInstance:
     - target: {fileID: 9195454135748114904, guid: 65a1f1250156ebf4b84f0ea296798e3b,
         type: 3}
       propertyPath: maxHealth
-      value: 300
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 9195454135748114904, guid: 65a1f1250156ebf4b84f0ea296798e3b,
         type: 3}
@@ -1652,7 +1667,7 @@ PrefabInstance:
     - target: {fileID: 9195454135748114904, guid: 65a1f1250156ebf4b84f0ea296798e3b,
         type: 3}
       propertyPath: bonusAttackDamage
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a1f1250156ebf4b84f0ea296798e3b, type: 3}
