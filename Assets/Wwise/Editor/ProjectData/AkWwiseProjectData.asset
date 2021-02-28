@@ -572,9 +572,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Group Project Wwise Session
-  - /Group Project Wwise Session/Events
-  - /Group Project Wwise Session/Events/Default Work Unit
-  - /Group Project Wwise Session/Events/Default Work Unit/Enemy
-  - /Group Project Wwise Session/Events/Default Work Unit/Enemy/Fishman
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

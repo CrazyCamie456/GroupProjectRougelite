@@ -8,13 +8,13 @@ public class Dash : MonoBehaviour
     [HideInInspector] public bool invincibility;
     public float dashSpeed;
     public int maxDashLimit = 2;
+    public float maxDashDelay = 2.0f;
+    public float maxDashDuration = 0.1f;
 
     private int dashLimit;
     private PlayerController playerController;
     private PlayerMovement playerMovement;
     private Rigidbody2D rb;
-    private float maxDashDelay = 2.0f;
-    private float maxDashDuration = 0.1f;
     private float dashDuration;
     private float dashDelay;
 
