@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 34e0cbddbe1fd5469200e6918afd23c6
     GuidInternal: 
-    m_lastTime: -8585888208622577013
+    m_lastTime: -8585872819814775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 334237adbf4dfc4b99b10db20ae7e79c
     GuidInternal: 
-    m_lastTime: -8585888208623773799
+    m_lastTime: -8585872819854775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 20a0907f8b27dd43b86024c028cd8259
     GuidInternal: 
-    m_lastTime: -8585886499114444869
+    m_lastTime: -8585872819834775808
     List:
     - name: Ambience
       guid: c580a5809610b4478fc585f094fc4e4a
@@ -69,6 +69,24 @@ MonoBehaviour:
       - ElementName: Character
         ObjectType: 7
       Path: Default Work Unit\Character
+    - name: Enemies
+      guid: af0201aed6da2040bf7ef6e2cdc56c4f
+      id: 2242381963
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemies
+        ObjectType: 7
+      Path: Default Work Unit\Enemies
+    - name: Spells
+      guid: 79d6ebc7e8e25641b1fec8b17047c8bd
+      id: 4160437992
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Spells
+        ObjectType: 7
+      Path: Default Work Unit\Spells
   EventWwu:
   - PhysicalPath: Events\Ambience.wwu
     PathAndIcons:
@@ -79,7 +97,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Ambience
     guid: 0145036126bceb4ab58872b0af928641
     GuidInternal: 
-    m_lastTime: -8585888198594511097
+    m_lastTime: -8585872819854775808
     List:
     - name: Play_Cave_Ambience
       guid: c8af46632b14b34b87a1901ea4cee698
@@ -107,8 +125,85 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Ambience\Stop_Cave_Ambience
       maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Bat.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Enemy
+      ObjectType: 12
+    - ElementName: Bat
+      ObjectType: 12
+    ParentPath: Default Work Unit\Enemy\Bat
+    guid: 3598b4694572c148808549e983909b1b
+    GuidInternal: 
+    m_lastTime: -8585874281534775808
+    List:
+    - name: Play_Bat_Death
+      guid: a6e78b0784a60b4ca8b5f716583b7d72
+      id: 2400548304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Bat
+        ObjectType: 12
+      - ElementName: Play_Bat_Death
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Bat\Play_Bat_Death
+      maxAttenuation: 0
+      maxDuration: 0.382698
+      minDuration: 0.382698
+    - name: Play_Bat_Hit
+      guid: ca7a2ebb18b11c47a10e2f8e9169be35
+      id: 1984045729
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Bat
+        ObjectType: 12
+      - ElementName: Play_Bat_Hit
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Bat\Play_Bat_Hit
+      maxAttenuation: 0
+      maxDuration: 0.522472
+      minDuration: 0.348027
+    - name: Play_Bat_Wings
+      guid: be3e30948bad644186d201f250be64eb
+      id: 1252137210
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Bat
+        ObjectType: 12
+      - ElementName: Play_Bat_Wings
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Bat\Play_Bat_Wings
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_Bat_Wings
+      guid: 5b35db37d68cc34bb27756b65f7abee7
+      id: 3463695276
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Bat
+        ObjectType: 12
+      - ElementName: Stop_Bat_Wings
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Bat\Stop_Bat_Wings
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Character.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
@@ -118,7 +213,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Character
     guid: 9b3304f090732043875a076121eac862
     GuidInternal: 
-    m_lastTime: -8585886499114265025
+    m_lastTime: -8585872819854775808
     List:
     - name: Play_Footstep
       guid: 84876a6562ab02449baa4c6fa44173f0
@@ -132,8 +227,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Character\Play_Footstep
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.98551
+      minDuration: 0.487619
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
@@ -141,8 +236,224 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 24988347e32c9f43a570031f0a04915b
     GuidInternal: 
-    m_lastTime: -8585886499114504712
+    m_lastTime: -8585872819854775808
     List: []
+  - PhysicalPath: Events\Enemy.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Enemy
+      ObjectType: 12
+    ParentPath: Default Work Unit\Enemy
+    guid: 6687ed9f2bb3a24f8dee519a9b8a23d4
+    GuidInternal: 
+    m_lastTime: -8585875538634775808
+    List: []
+  - PhysicalPath: Events\Fishman.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Enemy
+      ObjectType: 12
+    - ElementName: Fishman
+      ObjectType: 12
+    ParentPath: Default Work Unit\Enemy\Fishman
+    guid: 1a9db7c9ce8443429ba77b7e7ecd45b7
+    GuidInternal: 
+    m_lastTime: -8585872821774775808
+    List:
+    - name: Play_Fishman_Death
+      guid: 33d979669e06454699858bff1f761ddc
+      id: 1945939219
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Fishman
+        ObjectType: 12
+      - ElementName: Play_Fishman_Death
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Fishman\Play_Fishman_Death
+      maxAttenuation: 0
+      maxDuration: 1.132903
+      minDuration: 1.132903
+    - name: Play_Fishman_Footstep
+      guid: e01618fd73ade948b87ee834b8ef6b7f
+      id: 2137479701
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Fishman
+        ObjectType: 12
+      - ElementName: Play_Fishman_Footstep
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Fishman\Play_Fishman_Footstep
+      maxAttenuation: 0
+      maxDuration: 0.649819
+      minDuration: 0.526372
+    - name: Play_Fishman_Hit
+      guid: 281f88c13270cc4d92684bf17aa79846
+      id: 3263348706
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Fishman
+        ObjectType: 12
+      - ElementName: Play_Fishman_Hit
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Fishman\Play_Fishman_Hit
+      maxAttenuation: 0
+      maxDuration: 0.53127
+      minDuration: 0.5
+  - PhysicalPath: Events\Slime.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Enemy
+      ObjectType: 12
+    - ElementName: Slime
+      ObjectType: 12
+    ParentPath: Default Work Unit\Enemy\Slime
+    guid: b022f852096346448f504cdd8e137ec2
+    GuidInternal: 
+    m_lastTime: -8585874284494775808
+    List:
+    - name: Play_Slime_Death
+      guid: b4141b31a33b734e93cae1160ecb4229
+      id: 2068608165
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Slime
+        ObjectType: 12
+      - ElementName: Play_Slime_Death
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Slime\Play_Slime_Death
+      maxAttenuation: 0
+      maxDuration: 1.025964
+      minDuration: 1.025964
+    - name: Play_Slime_Hit
+      guid: ac0503359b7ca44c81451b4e1f1e65af
+      id: 753674436
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Slime
+        ObjectType: 12
+      - ElementName: Play_Slime_Hit
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Slime\Play_Slime_Hit
+      maxAttenuation: 0
+      maxDuration: 1.025964
+      minDuration: 1.025964
+    - name: Play_Slime_Movement
+      guid: ccb6d31517e64643a913648f0486278a
+      id: 1151165942
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Slime
+        ObjectType: 12
+      - ElementName: Play_Slime_Movement
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Slime\Play_Slime_Movement
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Slime_Movement
+      guid: b3be8a459836634b8168be977b6d35de
+      id: 129155376
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Slime
+        ObjectType: 12
+      - ElementName: Stop_Slime_Movement
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Slime\Stop_Slime_Movement
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\Spells.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Spells
+      ObjectType: 12
+    ParentPath: Default Work Unit\Spells
+    guid: 7c4c131c297d0d45bcd5e566f3bee65c
+    GuidInternal: 
+    m_lastTime: -8585872825814775808
+    List:
+    - name: Play_Air_Spell
+      guid: 3ffd5bfcfab763489b27e5e48214d812
+      id: 1363611153
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Spells
+        ObjectType: 12
+      - ElementName: Play_Air_Spell
+        ObjectType: 3
+      Path: Default Work Unit\Spells\Play_Air_Spell
+      maxAttenuation: 0
+      maxDuration: 0.75
+      minDuration: 0.75
+    - name: Play_Earth_Spell
+      guid: bddee1f57de64740885e395b2f967f58
+      id: 1873474369
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Spells
+        ObjectType: 12
+      - ElementName: Play_Earth_Spell
+        ObjectType: 3
+      Path: Default Work Unit\Spells\Play_Earth_Spell
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 0.75
+    - name: Play_Fire_Spell
+      guid: fa622579048ca04398a0bc1537f05cbc
+      id: 2246291881
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Spells
+        ObjectType: 12
+      - ElementName: Play_Fire_Spell
+        ObjectType: 3
+      Path: Default Work Unit\Spells\Play_Fire_Spell
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
+    - name: Play_Water_Spell
+      guid: 94676ec24186634e9474f4cb5775240e
+      id: 2479465468
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Spells
+        ObjectType: 12
+      - ElementName: Play_Water_Spell
+        ObjectType: 3
+      Path: Default Work Unit\Spells\Play_Water_Spell
+      maxAttenuation: 0
+      maxDuration: 1.75
+      minDuration: 1.738095
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -151,7 +462,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 06afed215c4bd447a21b2d67a0b58d80
     GuidInternal: 
-    m_lastTime: -8585888208623634188
+    m_lastTime: -8585872819854775808
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -161,8 +472,84 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7ad306cb799cc149b70af9a6c2220767
     GuidInternal: 
-    m_lastTime: -8585888208623564375
-    List: []
+    m_lastTime: -8585872819814775808
+    List:
+    - name: Air
+      guid: 42b892d2c2cf2640922d833d50f56aeb
+      id: 1050421051
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Air
+        ObjectType: 9
+      Path: Default Work Unit\Air
+      values:
+      - name: None
+        guid: 8c12586e57247543b8d45fe96366589b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Earth
+      guid: e56b2361f857fc40810c9e040c5cf9fe
+      id: 3747705955
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Earth
+        ObjectType: 9
+      Path: Default Work Unit\Earth
+      values:
+      - name: None
+        guid: 2968ba5531c09d499e7658a33c16599b
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Fire
+      guid: e199735c9bea0d43bd5ae974916bdf3a
+      id: 2678880713
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fire
+        ObjectType: 9
+      Path: Default Work Unit\Fire
+      values:
+      - name: None
+        guid: b8ad0624e4f6bb4686bce97f75d2c031
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Water
+      guid: e6f4dc5cce1e494cac9eeb0890ace643
+      id: 2654748154
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Water
+        ObjectType: 9
+      Path: Default Work Unit\Water
+      values:
+      - name: None
+        guid: d918ba06fe2c0548a8c446fbc2054c58
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -171,7 +558,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 614e5fce97881a42810ab87ded40d9ec
     GuidInternal: 
-    m_lastTime: -8585888208623843638
+    m_lastTime: -8585872819814775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -181,12 +568,13 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 30f370857cc6034690f0c7fdd61e959d
     GuidInternal: 
-    m_lastTime: -8585888208622686721
+    m_lastTime: -8585872819814775808
     List: []
   ExpandedItems:
   - /Group Project Wwise Session
   - /Group Project Wwise Session/Events
   - /Group Project Wwise Session/Events/Default Work Unit
-  - /Group Project Wwise Session/Events/Default Work Unit/Ambience
+  - /Group Project Wwise Session/Events/Default Work Unit/Enemy
+  - /Group Project Wwise Session/Events/Default Work Unit/Enemy/Fishman
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
