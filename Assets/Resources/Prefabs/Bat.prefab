@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 5747908866711399754}
   - component: {fileID: -751590653981158626}
   - component: {fileID: 487861046443146558}
-  m_Layer: 11
+  - component: {fileID: 2965128342527691208}
+  - component: {fileID: 3601730652939642548}
+  m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -85,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9c3d995464d6746a37da3a9131902e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 1
   baseMovementSpeed: 3
   bonusMovementSpeed: 0
   bonusAttackDamage: 0
@@ -118,6 +120,48 @@ MonoBehaviour:
   agroRange: 4
   activeSprite: {fileID: 21300000, guid: 7bf057d8d7f38d54986a932159950af6, type: 3}
   sleepSprite: {fileID: 21300000, guid: f1b063187021d0b4bbb752bbee400bee, type: 3}
+--- !u!114 &2965128342527691208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747908866711399763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43aa3e2576aea043bae54f0bebdbd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c513cbd89b23ea4bafbc104e89c8bea,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &3601730652939642548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747908866711399763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0684c77e0ac19c47bc88d95ff9a1772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiseevent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d969ad9294aba9746b512e6d9a0a63c9,
+      type: 2}
 --- !u!1 &5747908867523212769
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5747908867523212770}
   - component: {fileID: 5747908867523212771}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: BatSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
