@@ -1,0 +1,680 @@
+fileFormatVersion: 2
+guid: e386888a921aadd46aacf3a95c908b4b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3719366228121684042
+    second: FishManAggroWalkSpriteSheet_0
+  - first:
+      213: -1503129001280470538
+    second: FishManAggroWalkSpriteSheet_1
+  - first:
+      213: -1577730642917244417
+    second: FishManAggroWalkSpriteSheet_2
+  - first:
+      213: 6809823460210434911
+    second: FishManAggroWalkSpriteSheet_3
+  - first:
+      213: -2526091304347852766
+    second: FishManAggroWalkSpriteSheet_4
+  - first:
+      213: -2518939036682878096
+    second: FishManAggroWalkSpriteSheet_5
+  - first:
+      213: 6309840505117477558
+    second: FishManAggroWalkSpriteSheet_6
+  - first:
+      213: 6946047964525193087
+    second: FishManAggroWalkSpriteSheet_7
+  - first:
+      213: 6180987296691434579
+    second: FishManAggroWalkSpriteSheet_8
+  - first:
+      213: -5929889350050111310
+    second: FishManAggroWalkSpriteSheet_9
+  - first:
+      213: 2284966107073758367
+    second: FishManAggroWalkSpriteSheet_10
+  - first:
+      213: 958804630983533253
+    second: FishManAggroWalkSpriteSheet_11
+  - first:
+      213: -3719165686646383221
+    second: FishManAggroWalkSpriteSheet_12
+  - first:
+      213: -6306961643664633087
+    second: FishManAggroWalkSpriteSheet_13
+  - first:
+      213: 278110981637394381
+    second: FishManAggroWalkSpriteSheet_14
+  - first:
+      213: -2801498654030746251
+    second: FishManAggroWalkSpriteSheet_15
+  - first:
+      213: 7455846502033769632
+    second: FishManAggroWalkSpriteSheet_16
+  - first:
+      213: -6838618366050865950
+    second: FishManAggroWalkSpriteSheet_17
+  - first:
+      213: -1149291836855360143
+    second: FishManAggroWalkSpriteSheet_18
+  - first:
+      213: 3724938392491122533
+    second: FishManAggroWalkSpriteSheet_19
+  - first:
+      213: 7207692728985994685
+    second: FishManAggroWalkSpriteSheet_20
+  - first:
+      213: -2648890217248006701
+    second: FishManAggroWalkSpriteSheet_21
+  - first:
+      213: -7307547088033632339
+    second: FishManAggroWalkSpriteSheet_22
+  - first:
+      213: 765788263057369226
+    second: FishManAggroWalkSpriteSheet_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4807c0e0e7dd9330800000000000000
+      internalID: 3719366228121684042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f107132320d32be0800000000000000
+      internalID: -1503129001280470538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff14ba5e656ca1ae0800000000000000
+      internalID: -1577730642917244417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53e6f86b5a518e50800000000000000
+      internalID: 6809823460210434911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220a42ea75581fcd0800000000000000
+      internalID: -2526091304347852766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07307a3ca4eea0dd0800000000000000
+      internalID: -2518939036682878096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba06e8228e019750800000000000000
+      internalID: 6309840505117477558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77695e62d1556060800000000000000
+      internalID: 6946047964525193087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354be74b23747c550800000000000000
+      internalID: 6180987296691434579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b024e4dd0dc4bda0800000000000000
+      internalID: -5929889350050111310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9440ff6194d5bf10800000000000000
+      internalID: 2284966107073758367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2e5ce5bbb5e4d00800000000000000
+      internalID: 958804630983533253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dde92538ed26cc0800000000000000
+      internalID: -3719165686646383221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1031b510dcb2978a0800000000000000
+      internalID: -6306961643664633087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfc1acd67c0cd300800000000000000
+      internalID: 278110981637394381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d23cf21d31f19d0800000000000000
+      internalID: -2801498654030746251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4cf8d04ec787760800000000000000
+      internalID: 7455846502033769632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec631124d85811a0800000000000000
+      internalID: -6838618366050865950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175eaf0e925ec00f0800000000000000
+      internalID: -1149291836855360143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fd5ae7bb3a1b330800000000000000
+      internalID: 3724938392491122533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db54069595ed60460800000000000000
+      internalID: 7207692728985994685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dddcefb1604d3bd0800000000000000
+      internalID: -2648890217248006701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafa056f3a0669a90800000000000000
+      internalID: -7307547088033632339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishManAggroWalkSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88a2b03e50a0aa00800000000000000
+      internalID: 765788263057369226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

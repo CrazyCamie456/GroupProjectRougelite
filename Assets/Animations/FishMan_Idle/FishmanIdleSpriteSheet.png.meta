@@ -1,0 +1,680 @@
+fileFormatVersion: 2
+guid: f55ec18d7eb92794ca2d2e00e2e8b7db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1350401882312391046
+    second: FishmanIdleSpriteSheet_0
+  - first:
+      213: -2725144744316130604
+    second: FishmanIdleSpriteSheet_1
+  - first:
+      213: 5124126810064914303
+    second: FishmanIdleSpriteSheet_2
+  - first:
+      213: -75409964420120765
+    second: FishmanIdleSpriteSheet_3
+  - first:
+      213: 1670699981172095487
+    second: FishmanIdleSpriteSheet_4
+  - first:
+      213: -3254113353786731323
+    second: FishmanIdleSpriteSheet_5
+  - first:
+      213: 8276045132135991982
+    second: FishmanIdleSpriteSheet_6
+  - first:
+      213: -4306274033199902767
+    second: FishmanIdleSpriteSheet_7
+  - first:
+      213: 1274595273775810104
+    second: FishmanIdleSpriteSheet_8
+  - first:
+      213: 6551550469993649815
+    second: FishmanIdleSpriteSheet_9
+  - first:
+      213: -7143974388488799073
+    second: FishmanIdleSpriteSheet_10
+  - first:
+      213: 6826737513654050458
+    second: FishmanIdleSpriteSheet_11
+  - first:
+      213: -4238544341309782975
+    second: FishmanIdleSpriteSheet_12
+  - first:
+      213: -2058144022205541016
+    second: FishmanIdleSpriteSheet_13
+  - first:
+      213: 2602252562395997315
+    second: FishmanIdleSpriteSheet_14
+  - first:
+      213: -8538882118922811328
+    second: FishmanIdleSpriteSheet_15
+  - first:
+      213: 4954516324503307111
+    second: FishmanIdleSpriteSheet_16
+  - first:
+      213: 9091224364888875458
+    second: FishmanIdleSpriteSheet_17
+  - first:
+      213: -3333258326726323370
+    second: FishmanIdleSpriteSheet_18
+  - first:
+      213: -6306310374545785336
+    second: FishmanIdleSpriteSheet_19
+  - first:
+      213: 6447557056036001941
+    second: FishmanIdleSpriteSheet_20
+  - first:
+      213: 315477881362875772
+    second: FishmanIdleSpriteSheet_21
+  - first:
+      213: 8095644529541337713
+    second: FishmanIdleSpriteSheet_22
+  - first:
+      213: 3794754031124587749
+    second: FishmanIdleSpriteSheet_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689bf337b579db210800000000000000
+      internalID: 1350401882312391046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4daa3812b475e2ad0800000000000000
+      internalID: -2725144744316130604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7789f95f2e8c1740800000000000000
+      internalID: 5124126810064914303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fb632790714fef0800000000000000
+      internalID: -75409964420120765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9b308f7c48f2710800000000000000
+      internalID: 1670699981172095487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 630
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4dfa0552117d2d0800000000000000
+      internalID: -3254113353786731323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa0116033b6ad270800000000000000
+      internalID: 8276045132135991982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df81a9159a0d34c0800000000000000
+      internalID: -4306274033199902767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8368ccdf5a540b110800000000000000
+      internalID: 1274595273775810104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796d30cd078cbea50800000000000000
+      internalID: 6551550469993649815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cf2a1e4218bdc90800000000000000
+      internalID: -7143974388488799073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 420
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ede2c59917dbe50800000000000000
+      internalID: 6826737513654050458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1440d7bd06aad25c0800000000000000
+      internalID: -4238544341309782975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86558d39ae00073e0800000000000000
+      internalID: -2058144022205541016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384a67d0bee0d1420800000000000000
+      internalID: 2602252562395997315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048cbaa24fbcf7980800000000000000
+      internalID: -8538882118922811328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763c4e3d85af1c440800000000000000
+      internalID: 4954516324503307111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 210
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1e39a74648a2e70800000000000000
+      internalID: 9091224364888875458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6535dd25633edb1d0800000000000000
+      internalID: -3333258326726323370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e76d9602c7b78a0800000000000000
+      internalID: -6306310374545785336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598d61a5bf25a7950800000000000000
+      internalID: 6447557056036001941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75802d267dc06400800000000000000
+      internalID: 315477881362875772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172552b9ec1895070800000000000000
+      internalID: 8095644529541337713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FishmanIdleSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 250
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4a9239faca9a430800000000000000
+      internalID: 3794754031124587749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

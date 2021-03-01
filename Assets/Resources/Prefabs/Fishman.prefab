@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8754138717888898294}
   - component: {fileID: 8754138717888898297}
   - component: {fileID: 8754138717888898296}
+  - component: {fileID: 5794609632797752804}
   - component: {fileID: 8754138717888898299}
   - component: {fileID: 8754138717888898298}
   - component: {fileID: 8754138717888898301}
@@ -23,6 +24,7 @@ GameObject:
   - component: {fileID: 5307078184356221231}
   - component: {fileID: -3739565393167879470}
   - component: {fileID: 28288476981118469}
+  - component: {fileID: 7912304300165312417}
   m_Layer: 0
   m_Name: Fishman
   m_TagString: Enemy
@@ -148,6 +150,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceccdc7662014040afb1272b8951ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5794609632797752804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754138717888898272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f68476cdc773ab49a2411c5a72ffa72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &8754138717888898299
 Rigidbody2D:
   serializedVersion: 4
@@ -215,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 0
-  range: 30
+  range: 6
 --- !u!114 &8754138717888898302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +320,25 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a8d0214fbbec6ae498a05cf965e8d7ac,
       type: 2}
+--- !u!95 &7912304300165312417
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754138717888898272}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20da1ed01b6e36040ba54354f07bdf3a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8754138718596851776
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +349,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8754138718596851777}
   - component: {fileID: 8754138718596851806}
+  - component: {fileID: 4806204357639187062}
+  - component: {fileID: 6076323995288192851}
   m_Layer: 0
   m_Name: Fishman Sprite
   m_TagString: Untagged
@@ -376,7 +411,8 @@ SpriteRenderer:
   m_SortingLayerID: 644990645
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 305a61f6a04610943bcc43455a8d53e9, type: 3}
+  m_Sprite: {fileID: 1350401882312391046, guid: f55ec18d7eb92794ca2d2e00e2e8b7db,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -387,3 +423,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4806204357639187062
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754138718596851776}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a1953a502ccb4a49ade76f89ea252f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6076323995288192851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754138718596851776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc484d248ab7ebb4a87e2e6773d8559f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

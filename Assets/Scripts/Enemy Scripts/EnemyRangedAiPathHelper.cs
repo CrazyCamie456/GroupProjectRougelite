@@ -53,7 +53,8 @@ public class EnemyRangedAiPathHelper : MonoBehaviour
             canFire = false;
         }
 
-        }
+        Debug.Log(aiPath.endReachedDistance);
+    }
 
 
     
