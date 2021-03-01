@@ -16,7 +16,7 @@ public class ElementFireAttack : MonoBehaviour, IElementalAttack
 
 	public void Attack(Vector2 direction)
 	{
-		GameObject fireball = Instantiate(fireballPrefab, transform.position, ProjectileHelperFunctions.RotateToFace(direction));
+		GameObject fireball = Instantiate(fireballPrefab, transform.position + (new Vector3(direction.x, direction.y, 0) * 0.4f), ProjectileHelperFunctions.RotateToFace(direction));
 		fireball.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		fireball.GetComponent<DamageOnCollision>().Initialise("Enemy", 2);
 		fireball.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });

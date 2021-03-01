@@ -16,7 +16,7 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 
 	public void Attack(Vector2 direction)
 	{
-		GameObject airshot = Instantiate(airshotPrefab, transform.position, ProjectileHelperFunctions.RotateToFace(direction));
+		GameObject airshot = Instantiate(airshotPrefab, transform.position + (new Vector3(direction.x, direction.y, 0) * 0.4f), ProjectileHelperFunctions.RotateToFace(direction));
 		airshot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		airshot.GetComponent<Rigidbody2D>().angularVelocity = 1440.0f;
 		airshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 2);
