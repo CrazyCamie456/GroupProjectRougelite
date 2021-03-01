@@ -5206,11 +5206,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5737107677205263752, guid: 1504bed0119e9604f96f9bdb9fea4d03,
-        type: 3}
-      propertyPath: maxDashDelay
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5737107677205263756, guid: 1504bed0119e9604f96f9bdb9fea4d03,
         type: 3}
       propertyPath: m_RootOrder
@@ -5265,16 +5260,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5737107677205263757, guid: 1504bed0119e9604f96f9bdb9fea4d03,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5737107677205263757, guid: 1504bed0119e9604f96f9bdb9fea4d03,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -400113407
       objectReference: {fileID: 0}
     - target: {fileID: 5737107677205263759, guid: 1504bed0119e9604f96f9bdb9fea4d03,
         type: 3}
