@@ -7,7 +7,7 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 	// Compile time semi-static variables.
 	GameObject airshotPrefab;
 	float projectileSpeed = 20.0f; //20.0f;
-	float attackSpeed = 5.0f;
+	float attackSpeed = 7.5f;
 
 	void Start()
 	{
