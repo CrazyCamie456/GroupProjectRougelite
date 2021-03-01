@@ -6,7 +6,7 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour
 {
 	[SerializeField] private DoorScript[] doors;
-	[SerializeField] private IRoomUnlocker ru;
+	public IRoomUnlocker ru;
 	[SerializeField] private bool isCurrentRoom
 	{
 		get { return pIsCurrentRoom; }
@@ -38,11 +38,6 @@ public class RoomManager : MonoBehaviour
 		{
 			t.gameObject.SetActive(true);
 		}
-		LockAll();
-		// This starts a coroutine that will reunlock the room if the condition has already been met.
-		if (ru != null)
-			ru.Start();
-		else UnlockAll();
 	}
 
 	public void ExitRoom()
@@ -67,5 +62,7 @@ public class RoomManager : MonoBehaviour
 		ru = GetComponent<IRoomUnlocker>();
 		doors = GetComponentsInChildren<DoorScript>();
 		isCurrentRoom = gameObject.name == "StartingRoom";
+		if (isCurrentRoom)
+			LockAll();
 	}
 }
