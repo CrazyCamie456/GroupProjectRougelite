@@ -66,6 +66,10 @@ public class DoorScript : MonoBehaviour
 		playerCS.transform.localScale = new Vector3(1.0f, 1.0f, 0.0f);
 		playerCS.RemoveCrowdControl(roomChangeCC);
 		playerRB.simulated = true;
+		nextRoom.LockAll();
+		// This starts a coroutine that will reunlock the room if the condition has already been met.
+		if (nextRoom.ru != null)
+			nextRoom.ru.Start();
 		GetComponentInParent<RoomManager>().ExitRoom();
 		Time.timeScale = 1.0f;
 	}
