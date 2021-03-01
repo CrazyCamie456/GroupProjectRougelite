@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombatStats : CombatStats
 {
@@ -26,4 +27,9 @@ public class PlayerCombatStats : CombatStats
         }
     }
 
+	void OnDestroy()
+	{
+		if (currentHealth <= 0)
+			SceneManager.LoadScene(1);
+	}
 }

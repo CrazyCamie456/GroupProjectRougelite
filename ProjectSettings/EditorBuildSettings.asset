@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/CaveBasicLayout.unity
     guid: c33d1d8737b996b4b8bf2358425630f1
+  - enabled: 1
+    path: Assets/Resources/Scenes/BETA_DeathScreen.unity
+    guid: 252e258befacf534982eef017a3b51ba
+  - enabled: 1
+    path: Assets/Resources/Scenes/BETA_VictoryScene.unity
+    guid: 3e11b11c79093a246887101ee287aed5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ba0fd047f610db848814307994d7f923,
       type: 2}
