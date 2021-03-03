@@ -14,6 +14,7 @@ public class Death : MonoBehaviour
     {
         GameObject g = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/FishmanDying"), transform.position, Quaternion.identity);
         g.GetComponent<SpriteRenderer>().flipX = GetComponentInChildren<SpriteRenderer>().flipX;
+        g.transform.SetParent(GetComponentInParent<RoomManager>().transform);
     }
     // Update is called once per frame
     void Update()
