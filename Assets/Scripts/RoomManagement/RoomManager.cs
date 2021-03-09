@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-	[SerializeField] private DoorScript[] doors;
+	public List<DoorScript> doors;
 	public IRoomUnlocker ru;
 	[SerializeField] private bool isCurrentRoom
 	{
@@ -60,7 +60,7 @@ public class RoomManager : MonoBehaviour
 	void Start()
 	{
 		ru = GetComponent<IRoomUnlocker>();
-		doors = GetComponentsInChildren<DoorScript>();
+		doors = new List<DoorScript>(GetComponentsInChildren<DoorScript>());
 		isCurrentRoom = gameObject.name == "StartingRoom";
 		if (isCurrentRoom)
 			LockAll();
