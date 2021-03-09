@@ -12,7 +12,7 @@ public class DoorScript : MonoBehaviour
 
 	static Guid roomChangeCC = new Guid();
 
-	public Vector2 nextRoomDirection;
+	Vector2 nextRoomDirection;
 	private Vector2 roomSize = new Vector2(16.0f, 9.0f);
 	public RoomManager nextRoom;
 	public bool isDoorLocked
@@ -76,6 +76,16 @@ public class DoorScript : MonoBehaviour
 
 	void OnTriggerStay2D(Collider2D collision)
 	{
+		float zRot = transform.localEulerAngles.z % 360;
+		if (zRot > -1.0f && zRot < 1.0f)
+			nextRoomDirection = new Vector2(0.0f, 1.0f);
+		if (zRot > 269.0f && zRot < 271.0f)
+			nextRoomDirection = new Vector2(1.0f, 0.0f);
+		if (zRot > 179.0f && zRot < 181.0f)
+			nextRoomDirection = new Vector2(0.0f, -1.0f);
+		if (zRot > 89.0f && zRot < 91.0f)
+			nextRoomDirection = new Vector2(-1.0f, 0.0f);
+
 		// This just needs to guarantee the player doesn't exit a room and return into it the next frame.
 		if (collision.tag == "Player" && !isDoorLocked && Time.time - lastDoorTime > Time.deltaTime + 0.00001f)
 		{
