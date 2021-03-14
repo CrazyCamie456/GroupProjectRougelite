@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class FloorData : MonoBehaviour
 {
-	RoomData roomData;
-
 	public List<string> specialRooms;
 	public int minRooms;
 	public int maxRooms;
@@ -52,11 +50,14 @@ public class FloorData : MonoBehaviour
 		GameObject startingRoom = CreateRoom(Resources.Load("SpecialRooms/StartingRoom"), new Vector2(0.0f, 0.0f));
 		startingRoom.name = "StartingRoom";
 		noOfRoomsBeforeBoss--;
-		RoomManager srRm = startingRoom.GetComponent<RoomManager>();
+		RoomData srRm = startingRoom.GetComponent<RoomData>();
 		rooms.Add(startingRoom);
 
 		GameObject testRoom = CreateRoom(temp[0], new Vector2(16.0f, 9.0f));
-		RoomManager trRm = testRoom.GetComponent<RoomManager>();
+		RoomData trRm = testRoom.GetComponent<RoomData>();
+
+		srRm.AddDoor(DoorLocations.TopLeft_Right, trTm);
+		trTm.AddDoor(DoorLocations.TopLeft_Left, srRm);
 
 		while (noOfRoomsBeforeBoss > 0)
 		{

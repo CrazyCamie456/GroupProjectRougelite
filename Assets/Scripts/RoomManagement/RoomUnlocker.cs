@@ -13,7 +13,7 @@ public class RoomUnlocker : MonoBehaviour, IRoomUnlocker
 		{
 			yield return null;
 		}
-		GetComponent<RoomManager>().UnlockAll();
+		GetComponent<RoomData>().UnlockAll();
 	}
 
 	public void Start()

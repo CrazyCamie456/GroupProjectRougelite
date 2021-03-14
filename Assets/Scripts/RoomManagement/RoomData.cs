@@ -3,6 +3,59 @@ using UnityEngine;
 
 public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it should show in the inspector, if you're using Start or Update, etc. in here, please reconsider.
 {
+	public List<DoorScript> doors;
+	public IRoomUnlocker ru;
+	[SerializeField]
+	private bool isCurrentRoom
+	{
+		get { return pIsCurrentRoom; }
+		set
+		{
+			if (value) EnterRoom();
+			else ExitRoom();
+			pIsCurrentRoom = value;
+		}
+	}
+	bool pIsCurrentRoom;
+
+	public void UnlockAll()
+	{
+		foreach (DoorScript d in doors)
+			d.isDoorLocked = false;
+	}
+
+	public void LockAll()
+	{
+		foreach (DoorScript d in doors)
+			d.isDoorLocked = true;
+	}
+
+	public void EnterRoom()
+	{
+		Transform[] temp = GetComponentsInChildren<Transform>(true);
+		foreach (Transform t in temp)
+		{
+			t.gameObject.SetActive(true);
+		}
+	}
+
+	public void ExitRoom()
+	{
+		Transform[] temp = GetComponentsInChildren<Transform>(false);
+		foreach (Transform t in temp)
+		{
+			if (t == transform)
+				t.gameObject.SetActive(true);
+			else
+				t.gameObject.SetActive(false);
+		}
+	}
+
+	void Initialise(bool _isCurrentRoom)
+	{
+		isCurrentRoom = _isCurrentRoom;
+	}
+
 	public enum RoomSize
 	{
 		small, large, L_shape, J_shape, wide, tall
@@ -32,37 +85,37 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 	{
 		// *************
 		// Top Left Room
-		topLeft_Top_Left = 0, topLeft_Top_Center, topLeft_Top_Right, // Along the top
-		topLeft_Right_Top = 12, topLeft_Right_Center, topLeft_Right_Bottom, // Along the right
-		topLeft_Bottom_Left = 24, topLeft_Bottom_Center, topLeft_Bottom_Right, // Along the bottom
-		topLeft_Left_Top = 36, topLeft_Left_Center, topLeft_Left_Bottom, // Along the left
+		topLeft_Top_Left = 0, topLeft_Top_Right, // Along the top
+		topLeft_Bottom_Left = 8, topLeft_Bottom_Right, // Along the bottom
+		topLeft_Right = 16,
+		topLeft_Left = 20,
 
 		__ = -1,
 
 		// **************
 		// Top Right Room
-		topRight_Top_Left = 3, topRight_Top_Center, topRight_Top_Right, // Along the top
-		topRight_Right_Top = 15, topRight_Right_Center, topRight_Right_Bottom, // Along the right
-		topRight_Bottom_Left = 27, topRight_Bottom_Center, topRight_Bottom_Right, // Along the bottom
-		topRight_Left_Top = 39, topRight_Left_Center, topRight_Left_Bottom, // Along the left
+		topRight_Top_Left = 2, topRight_Top_Right, // Along the top
+		topRight_Bottom_Left = 10, topRight_Bottom_Right, // Along the bottom
+		topRight_Right = 17, 
+		topRight_Left = 21,
 
 		___ = -1,
 
 		// **************
 		// Bottom Left Room
-		bottomLeft_Top_Left = 6, bottomLeft_Top_Center, bottomLeft_Top_Right, // Along the top
-		bottomLeft_Right_Top = 18, bottomLeft_Right_Center, bottomLeft_Right_Bottom, // Along the right
-		bottomLeft_Bottom_Left = 30, bottomLeft_Bottom_Center, bottomLeft_Bottom_Right, // Along the bottom
-		bottomLeft_Left_Top = 42, bottomLeft_Left_Center, bottomLeft_Left_Bottom, // Along the left
+		bottomLeft_Top_Left = 4, bottomLeft_Top_Right, // Along the top
+		bottomLeft_Bottom_Left = 12, bottomLeft_Bottom_Right, // Along the bottom
+		bottomLeft_Right = 18,// Along the right
+		bottomLeft_Left = 22, // Along the left
 
 		____ = -1,
 
 		// **************
 		// Bottom Right Room
-		bottomRight_Top_Left = 9, bottomRight_Top_Center, bottomRight_Top_Right, // Along the top
-		bottomRight_Right_Top = 21, bottomRight_Right_Center, bottomRight_Right_Bottom, // Along the right
-		bottomRight_Bottom_Left = 33, bottomRight_Bottom_Center, bottomRight_Bottom_Right, // Along the bottom
-		bottomRight_Left_Top = 45, bottomRight_Left_Center, bottomRight_Left_Bottom // Along the left
+		bottomRight_Top_Left = 6, bottomRight_Top_Right, // Along the top
+		bottomRight_Bottom_Left = 14, bottomRight_Bottom_Right, // Along the bottom
+		bottomRight_Right = 19, // Along the right
+		bottomRight_Left = 23 // Along the left
 	}
 	/*	The below variables are used to ensure that doors are rotated correctly, and that
 		they move the player in the correct direction so that they end up in the correct room.
@@ -70,11 +123,10 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 	   
 		Also, you probably don't need to access these.
 	*/
-	public readonly int DOOR_ROT_CODE_DOORS_PER_SIDE = 12;
 	public readonly int DOOR_ROT_CODE_TOP_WALL_OFFSET = 0;
-	public readonly int DOOR_ROT_CODE_RIGHT_WALL_OFFSET = 12;
-	public readonly int DOOR_ROT_CODE_BOTTOM_WALL_OFFSET = 24;
-	public readonly int DOOR_ROT_CODE_LEFT_WALL_OFFSET = 36;
+	public readonly int DOOR_ROT_CODE_BOTTOM_WALL_OFFSET = 8;
+	public readonly int DOOR_ROT_CODE_RIGHT_WALL_OFFSET = 16;
+	public readonly int DOOR_ROT_CODE_LEFT_WALL_OFFSET = 20;
 
 	// *************************************
 	// VERY IMPORTANT ENUM STUFF ENDS HERE
@@ -85,6 +137,33 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 
 	public List<DoorLocations> validDoorLocations;
 
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.red;
+		Vector3 pos = new Vector3();
+		Vector3 size = new Vector3(1.0f, 1.0f, 0.0f);
+		foreach (DoorLocations d in validDoorLocations)
+		{
+			pos = DoorLocationToRelativeVec3(d);
+			Gizmos.DrawWireCube(pos, size);
+		}
+	}
+
+	Vector3 DoorLocationToRelativeVec3(DoorLocations d)
+	{
+		switch (d)
+		{
+			case DoorLocations.topLeft_Top_Left:		return new Vector3(-3.5f, -4.0f, 0.0f);
+			case DoorLocations.topLeft_Top_Right:		return new Vector3(3.5f, -4.0f, 0.0f); 
+			case DoorLocations.topLeft_Bottom_Left:		return new Vector3(-3.5f, 4.0f, 0.0f);
+			case DoorLocations.topLeft_Bottom_Right:	return new Vector3(3.5f, 4.0f, 0.0f);
+			case DoorLocations.topLeft_Left:			return new Vector3(-7.5f, 0.0f, 0.0f);
+			case DoorLocations.topLeft_Right:			return new Vector3(7.5f, 0.0f, 0.0f);
+			
+			default:									return Vector3.zero;
+		}
+	}
+
 	[HideInInspector] public List<DoorLocations> doorLocations;
 
 	GameObject doorGameObject;
@@ -94,13 +173,12 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 		return Vector3.zero;
 	}
 
-	void AddDoor(DoorLocations dl, GameObject leadsTo)
+	void AddDoor(DoorLocations dl, RoomData leadsTo)
 	{
 		doorLocations.Add(dl);
-		Instantiate(doorGameObject);
-	}
+		Instantiate(doorGameObject, transform.position + DoorLocationToRelativeWorldPosition(dl), Quaternion.identity);
 
-	public RoomManager rm;
+	}
 
 	void Awake()
 	{
@@ -114,5 +192,14 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 				throw new System.Exception("You've selected an '_' as a \"valid door location\" on the room called " + gameObject.name + " at index " + i + ".");
 			}
 		}
+	}
+
+	void Start()
+	{
+		ru = GetComponent<IRoomUnlocker>();
+		doors = new List<DoorScript>(GetComponentsInChildren<DoorScript>());
+		isCurrentRoom = gameObject.name == "StartingRoom";
+		if (isCurrentRoom)
+			LockAll();
 	}
 }

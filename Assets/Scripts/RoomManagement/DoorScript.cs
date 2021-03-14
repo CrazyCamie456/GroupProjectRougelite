@@ -14,7 +14,7 @@ public class DoorScript : MonoBehaviour
 
 	Vector2 nextRoomDirection;
 	private Vector2 roomSize = new Vector2(16.0f, 9.0f);
-	public RoomManager nextRoom;
+	public RoomData nextRoom;
 	public bool isDoorLocked
 	{
 		get
@@ -70,7 +70,7 @@ public class DoorScript : MonoBehaviour
 		// This starts a coroutine that will reunlock the room if the condition has already been met.
 		if (nextRoom.ru != null)
 			nextRoom.ru.Start();
-		GetComponentInParent<RoomManager>().ExitRoom();
+		GetComponentInParent<RoomData>().ExitRoom();
 		Time.timeScale = 1.0f;
 	}
 
