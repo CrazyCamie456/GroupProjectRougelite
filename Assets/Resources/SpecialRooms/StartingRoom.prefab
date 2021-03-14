@@ -718,10 +718,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8736076343805707002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee9a521c7da3f8648bb5cd0754bdfb49, type: 3}
+  m_Script: {fileID: 11500000, guid: 44413df65c349d44f819691d3e9bef03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doors: []
+  roomSize: 0
+  validDoorLocations: 10000000
+  doorLocations: 
 --- !u!114 &8736076343805707001
 MonoBehaviour:
   m_ObjectHideFlags: 0
