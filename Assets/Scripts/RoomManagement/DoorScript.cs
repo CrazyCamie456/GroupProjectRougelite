@@ -48,13 +48,13 @@ public class DoorScript : MonoBehaviour
 	IEnumerator DoorPlayerSlide()
 	{
 		Time.timeScale = 0.0f;
-		Vector3 nextRoomDir3 = new Vector3(nextRoomDirection.x, nextRoomDirection.y, 0.0f);
+		Vector3 nextRoomDir3 = new Vector3(nextRoomDirection.x * 5.14f, nextRoomDirection.y * 3.14f, 0.0f);
 		float elapsedTime = 0.0f;
 		playerCS.ApplyCrowdControl(roomChangeCC);
 		playerRB.simulated = false;
 		while (elapsedTime < 1.0f)
 		{
-			playerCS.transform.position += nextRoomDir3 * 3.14f * Time.unscaledDeltaTime;
+			playerCS.transform.position += nextRoomDir3 * Time.unscaledDeltaTime;
 			if (elapsedTime < 0.5f)
 				playerCS.transform.localScale -= playerCS.transform.localScale * Time.unscaledDeltaTime;
 			else

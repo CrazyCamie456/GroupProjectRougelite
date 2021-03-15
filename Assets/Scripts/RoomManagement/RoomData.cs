@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it should show in the inspector, if you're using Start or Update, etc. in here, please reconsider.
+public class RoomData : MonoBehaviour
 {
 	public List<DoorScript> doors;
 	public IRoomUnlocker ru;
@@ -63,6 +63,8 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 
 	public RoomSize roomSize;
 
+	public Vector2Int roomSpacePosition;
+
 	#region DoorLocationsEnum
 	// *************************************
 	// VERY IMPORTANT ENUM STUFF STARTS HERE
@@ -85,8 +87,8 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 	{
 		// *************
 		// Top Left Room
-		topLeft_Top_Left = 0, topLeft_Top_Right, // Along the top
-		topLeft_Bottom_Left = 8, topLeft_Bottom_Right, // Along the bottom
+		topLeft_Top_Left = 0, topLeft_Top_Right = 4, // Along the top
+		topLeft_Bottom_Left = 8, topLeft_Bottom_Right = 12, // Along the bottom
 		topLeft_Right = 16,
 		topLeft_Left = 20,
 
@@ -94,8 +96,8 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 
 		// **************
 		// Top Right Room
-		topRight_Top_Left = 2, topRight_Top_Right, // Along the top
-		topRight_Bottom_Left = 10, topRight_Bottom_Right, // Along the bottom
+		topRight_Top_Left = 1, topRight_Top_Right = 5, // Along the top
+		topRight_Bottom_Left = 9, topRight_Bottom_Right = 13, // Along the bottom
 		topRight_Right = 17, 
 		topRight_Left = 21,
 
@@ -103,8 +105,8 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 
 		// **************
 		// Bottom Left Room
-		bottomLeft_Top_Left = 4, bottomLeft_Top_Right, // Along the top
-		bottomLeft_Bottom_Left = 12, bottomLeft_Bottom_Right, // Along the bottom
+		bottomLeft_Top_Left = 2, bottomLeft_Top_Right = 6, // Along the top
+		bottomLeft_Bottom_Left = 10, bottomLeft_Bottom_Right = 14, // Along the bottom
 		bottomLeft_Right = 18,// Along the right
 		bottomLeft_Left = 22, // Along the left
 
@@ -112,8 +114,8 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 
 		// **************
 		// Bottom Right Room
-		bottomRight_Top_Left = 6, bottomRight_Top_Right, // Along the top
-		bottomRight_Bottom_Left = 14, bottomRight_Bottom_Right, // Along the bottom
+		bottomRight_Top_Left = 3, bottomRight_Top_Right = 7, // Along the top
+		bottomRight_Bottom_Left = 11, bottomRight_Bottom_Right = 15, // Along the bottom
 		bottomRight_Right = 19, // Along the right
 		bottomRight_Left = 23 // Along the left
 	}
@@ -123,10 +125,14 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 	   
 		Also, you probably don't need to access these.
 	*/
-	public readonly int DOOR_ROT_CODE_TOP_WALL_OFFSET = 0;
-	public readonly int DOOR_ROT_CODE_BOTTOM_WALL_OFFSET = 8;
-	public readonly int DOOR_ROT_CODE_RIGHT_WALL_OFFSET = 16;
-	public readonly int DOOR_ROT_CODE_LEFT_WALL_OFFSET = 20;
+	public static readonly int DOOR_ROT_CODE_TOP_LEFT_WALL_OFFSET = 4;
+	public static readonly int DOOR_ROT_CODE_TOP_RIGHT_WALL_OFFSET = 8;
+	public static readonly int DOOR_ROT_CODE_TOP_WALL_OFFSET = 8;
+	public static readonly int DOOR_ROT_CODE_BOTTOM_LEFT_WALL_OFFSET = 12;
+	public static readonly int DOOR_ROT_CODE_BOTTOM_RIGHT_WALL_OFFSET = 16;
+	public static readonly int DOOR_ROT_CODE_BOTTOM_WALL_OFFSET = 16;
+	public static readonly int DOOR_ROT_CODE_RIGHT_WALL_OFFSET = 20;
+	public static readonly int DOOR_ROT_CODE_LEFT_WALL_OFFSET = 24;
 
 	// *************************************
 	// VERY IMPORTANT ENUM STUFF ENDS HERE
@@ -139,13 +145,27 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 
 	private void OnDrawGizmos()
 	{
-		Gizmos.color = Color.red;
-		Vector3 pos = new Vector3();
-		Vector3 size = new Vector3(1.0f, 1.0f, 0.0f);
-		foreach (DoorLocations d in validDoorLocations)
+		if (name == "StartingRoom")
+			Gizmos.color = Color.magenta;
+		else if (name == "BossRoom")
+			Gizmos.color = Color.red; 
+		else
+			Gizmos.color = Color.blue;
+		Vector3 pos = new Vector3(0.0f, 0.0f, 0.0f);
+		Vector3 size = new Vector3(15.9f, 8.9f, 0.0f);
+		pos = roomSpacePosition * new Vector2(16.0f, 9.0f);
+		Gizmos.DrawWireCube(pos, size);
+
+		if (isCurrentRoom)
 		{
-			pos = DoorLocationToRelativeVec3(d);
-			Gizmos.DrawWireCube(pos, size);
+			Gizmos.color = Color.red;
+			pos = new Vector3();
+			size = new Vector3(1.0f, 1.0f, 0.0f);
+			foreach (DoorLocations d in validDoorLocations)
+			{
+				pos = transform.position + DoorLocationToRelativeVec3(d);
+				Gizmos.DrawWireCube(pos, size);
+			}
 		}
 	}
 
@@ -153,31 +173,43 @@ public class RoomData : MonoBehaviour // This is only a MonoBehaviour because it
 	{
 		switch (d)
 		{
-			case DoorLocations.topLeft_Top_Left:		return new Vector3(-3.5f, -4.0f, 0.0f);
-			case DoorLocations.topLeft_Top_Right:		return new Vector3(3.5f, -4.0f, 0.0f); 
-			case DoorLocations.topLeft_Bottom_Left:		return new Vector3(-3.5f, 4.0f, 0.0f);
-			case DoorLocations.topLeft_Bottom_Right:	return new Vector3(3.5f, 4.0f, 0.0f);
-			case DoorLocations.topLeft_Left:			return new Vector3(-7.5f, 0.0f, 0.0f);
-			case DoorLocations.topLeft_Right:			return new Vector3(7.5f, 0.0f, 0.0f);
+			case DoorLocations.topLeft_Top_Left:		return new Vector3(-3.5f, 4.0f, 0.0f);
+			case DoorLocations.topLeft_Top_Right:		return new Vector3(3.5f, 4.0f, 0.0f); 
+			case DoorLocations.topLeft_Bottom_Left:		return new Vector3(-3.5f, -4.0f, 0.0f);
+			case DoorLocations.topLeft_Bottom_Right:	return new Vector3(3.5f, -4.0f, 0.0f);
+			case DoorLocations.topLeft_Left:			return new Vector3(-6.5f, 0.0f, 0.0f);
+			case DoorLocations.topLeft_Right:			return new Vector3(6.5f, 0.0f, 0.0f);
+
+			// @TODO: Finish adding these
 			
 			default:									return Vector3.zero;
 		}
+	}
+
+	Quaternion DoorLocationToRotation(DoorLocations d)
+	{
+		if ((int)d < DOOR_ROT_CODE_TOP_WALL_OFFSET)
+			return Quaternion.Euler(0.0f, 0.0f, 0.0f);
+		if ((int)d < DOOR_ROT_CODE_BOTTOM_WALL_OFFSET)
+			return Quaternion.Euler(0.0f, 0.0f, 180.0f);
+		if ((int)d < DOOR_ROT_CODE_RIGHT_WALL_OFFSET)
+			return Quaternion.Euler(0.0f, 0.0f, 270.0f);
+		if ((int)d < DOOR_ROT_CODE_LEFT_WALL_OFFSET)
+			return Quaternion.Euler(0.0f, 0.0f, 90.0f);
+
+		return Quaternion.identity;
 	}
 
 	[HideInInspector] public List<DoorLocations> doorLocations;
 
 	GameObject doorGameObject;
 
-	Vector3 DoorLocationToRelativeWorldPosition(DoorLocations dl)
-	{
-		return Vector3.zero;
-	}
-
-	void AddDoor(DoorLocations dl, RoomData leadsTo)
+	public void AddDoor(Transform parent, DoorLocations dl, RoomData leadsTo)
 	{
 		doorLocations.Add(dl);
-		Instantiate(doorGameObject, transform.position + DoorLocationToRelativeWorldPosition(dl), Quaternion.identity);
-
+		GameObject door = Instantiate(doorGameObject, transform.position + DoorLocationToRelativeVec3(dl), DoorLocationToRotation(dl));
+		door.GetComponent<DoorScript>().nextRoom = leadsTo;
+		door.transform.parent = parent;
 	}
 
 	void Awake()
