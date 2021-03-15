@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 34e0cbddbe1fd5469200e6918afd23c6
     GuidInternal: 
-    m_lastTime: -8585872819814775808
+    m_lastTime: -8585870156027584407
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 334237adbf4dfc4b99b10db20ae7e79c
     GuidInternal: 
-    m_lastTime: -8585872819854775808
+    m_lastTime: -8585870155989140832
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 20a0907f8b27dd43b86024c028cd8259
     GuidInternal: 
-    m_lastTime: -8585872819834775808
+    m_lastTime: -8585870155998441036
     List:
     - name: Ambience
       guid: c580a5809610b4478fc585f094fc4e4a
@@ -97,7 +97,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Ambience
     guid: 0145036126bceb4ab58872b0af928641
     GuidInternal: 
-    m_lastTime: -8585872819854775808
+    m_lastTime: -8585870156023470349
     List:
     - name: Play_Cave_Ambience
       guid: c8af46632b14b34b87a1901ea4cee698
@@ -138,7 +138,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy\Bat
     guid: 3598b4694572c148808549e983909b1b
     GuidInternal: 
-    m_lastTime: -8585874281534775808
+    m_lastTime: -8585870156024028858
     List:
     - name: Play_Bat_Death
       guid: a6e78b0784a60b4ca8b5f716583b7d72
@@ -213,7 +213,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Character
     guid: 9b3304f090732043875a076121eac862
     GuidInternal: 
-    m_lastTime: -8585872819854775808
+    m_lastTime: -8585870156024308109
     List:
     - name: Play_Footstep
       guid: 84876a6562ab02449baa4c6fa44173f0
@@ -236,7 +236,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 24988347e32c9f43a570031f0a04915b
     GuidInternal: 
-    m_lastTime: -8585872819854775808
+    m_lastTime: -8585870156023609978
     List: []
   - PhysicalPath: Events\Enemy.wwu
     PathAndIcons:
@@ -247,7 +247,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy
     guid: 6687ed9f2bb3a24f8dee519a9b8a23d4
     GuidInternal: 
-    m_lastTime: -8585875538634775808
+    m_lastTime: -8585870156023879257
     List: []
   - PhysicalPath: Events\Fishman.wwu
     PathAndIcons:
@@ -260,7 +260,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy\Fishman
     guid: 1a9db7c9ce8443429ba77b7e7ecd45b7
     GuidInternal: 
-    m_lastTime: -8585872821774775808
+    m_lastTime: -8585870156024168484
     List:
     - name: Play_Fishman_Death
       guid: 33d979669e06454699858bff1f761ddc
@@ -321,7 +321,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy\Slime
     guid: b022f852096346448f504cdd8e137ec2
     GuidInternal: 
-    m_lastTime: -8585874284494775808
+    m_lastTime: -8585870156024447737
     List:
     - name: Play_Slime_Death
       guid: b4141b31a33b734e93cae1160ecb4229
@@ -396,7 +396,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Spells
     guid: 7c4c131c297d0d45bcd5e566f3bee65c
     GuidInternal: 
-    m_lastTime: -8585872825814775808
+    m_lastTime: -8585870156023739631
     List:
     - name: Play_Air_Spell
       guid: 3ffd5bfcfab763489b27e5e48214d812
@@ -462,7 +462,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 06afed215c4bd447a21b2d67a0b58d80
     GuidInternal: 
-    m_lastTime: -8585872819854775808
+    m_lastTime: -8585870156024956375
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -472,7 +472,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7ad306cb799cc149b70af9a6c2220767
     GuidInternal: 
-    m_lastTime: -8585872819814775808
+    m_lastTime: -8585870156027240271
     List:
     - name: Air
       guid: 42b892d2c2cf2640922d833d50f56aeb
@@ -558,7 +558,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 614e5fce97881a42810ab87ded40d9ec
     GuidInternal: 
-    m_lastTime: -8585872819814775808
+    m_lastTime: -8585870156003662482
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -568,7 +568,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 30f370857cc6034690f0c7fdd61e959d
     GuidInternal: 
-    m_lastTime: -8585872819814775808
+    m_lastTime: -8585870156027070725
     List: []
   ExpandedItems:
   - /Group Project Wwise Session
