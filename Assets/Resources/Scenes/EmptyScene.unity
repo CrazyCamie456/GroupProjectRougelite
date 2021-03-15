@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 403623312}
   - component: {fileID: 403623311}
   - component: {fileID: 403623308}
+  - component: {fileID: 403623313}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -223,11 +224,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialRooms: []
-  minRooms: 5
-  maxRooms: 5
-  minRoomsBeforeBoss: 3
-  maxRoomsBeforeBoss: 3
-  rooms: []
+  minRooms: 18
+  maxRooms: 23
+  minRoomsBeforeBoss: 7
+  maxRoomsBeforeBoss: 13
 --- !u!20 &403623309
 Camera:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -321,6 +321,20 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &403623313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403623307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374cb151525d3ca4e827a3bf742f4866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: 0, y: 0}
+  movementSpeed: 6
 --- !u!1 &1584574663
 GameObject:
   m_ObjectHideFlags: 0
