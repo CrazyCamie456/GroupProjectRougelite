@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-     
-    }
+	static bool isQuitting = false;
 
-    private void OnDestroy()
+	// This solves the bug with gameObjects (corpses) being created when the game is quit in the editor.
+	[RuntimeInitializeOnLoadMethod] static void RunOnStart() { Application.quitting += () => isQuitting = true; }
+
+	private void OnDestroy()
     {
-        GameObject g = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/FishmanDying"), transform.position, Quaternion.identity);
-        g.GetComponent<SpriteRenderer>().flipX = GetComponentInChildren<SpriteRenderer>().flipX;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		if (isQuitting) return;
+
+		GameObject g = Instantiate(Resources.Load("Prefabs/FishmanDying"), transform.position, Quaternion.identity) as GameObject;
+		g.GetComponent<SpriteRenderer>().flipX = GetComponentInChildren<SpriteRenderer>().flipX;
+	}
 }
