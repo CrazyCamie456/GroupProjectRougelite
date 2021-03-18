@@ -7,7 +7,7 @@ public class PlayerCombatStats : CombatStats
 {
     public float setIFrames;
     private float iFrames=-1.0f;
-
+    public int currency=0;
     public override void TakeDamage(int damage)
     {
         if (iFrames < 0)
