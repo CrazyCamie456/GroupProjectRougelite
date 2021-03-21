@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     //Declare Private variable
     private PlayerController playerController;
     private CombatStats combatStats;
+    private PlayerWalkingSoundManager playerWalkingSoundManager;
     private void Awake()
     {
         playerController = new PlayerController();
@@ -29,10 +30,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         combatStats = GetComponent<CombatStats>();
+        playerWalkingSoundManager = GetComponent<PlayerWalkingSoundManager>();
     }
 
     void Update()
     {
+        playerWalkingSoundManager.isWalking = false;
         if (!isDashing)
         {
             //reset velocity
@@ -47,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
             //Right stick and mouse
             directionAiming = playerController.Player.Mouse.ReadValue<Vector2>();
             //move the player
+
+            if (movementDirection.x > 0.25 || movementDirection.x < -0.25 || movementDirection.y > 0.25 || movementDirection.y < -0.25)
+            {
+                playerWalkingSoundManager.isWalking = true;
+            }
 
             rb.velocity += movementDirection * combatStats.movementSpeed;
         }
