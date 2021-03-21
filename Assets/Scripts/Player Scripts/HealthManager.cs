@@ -11,11 +11,11 @@ public class HealthManager : MonoBehaviour
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
-    private CombatStats combatStats;
+    private PlayerCombatStats combatStats;
     bool halfHeartNeeded = false;
     void Start()
     {
-        combatStats = GameObject.Find("Player").GetComponent<CombatStats>();
+        combatStats = GameObject.Find("Player").GetComponent<PlayerCombatStats>();
 
     }
 
@@ -23,24 +23,11 @@ public class HealthManager : MonoBehaviour
     {
 
         enabledHearts = 0;
+        maxHeartCount = (int)Mathf.Ceil(combatStats.maxHealth / 2.0f) - 1;
 
-        if (combatStats.maxHealth % 2 == 1)
-        {
-            maxHeartCount = (int)Mathf.Ceil(combatStats.maxHealth / 2.0f)-1;
-        }
-        else
-        {
-            maxHeartCount = (int)Mathf.Ceil(combatStats.maxHealth / 2.0f)-1;
-        }
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < maxHeartCount)
-            {
-                hearts[i].enabled = true;
-                hearts[i].sprite = emptyHeart;
-                enabledHearts++;
-            }
-            else if (i == maxHeartCount)
+            if (i <= maxHeartCount)
             {
                 hearts[i].enabled = true;
                 hearts[i].sprite = emptyHeart;
@@ -66,17 +53,14 @@ public class HealthManager : MonoBehaviour
         {
             if (i < heartCount)
             {
-                hearts[i].enabled = true;
                 hearts[i].sprite = fullHeart;
             }
             else if (halfHeartNeeded && i == heartCount)
             {
-                hearts[i].enabled = true;
                 hearts[i].sprite = halfHeart;
             }
             else
             {
-                hearts[i].enabled = true;
                 hearts[i].sprite = emptyHeart;
 
             }

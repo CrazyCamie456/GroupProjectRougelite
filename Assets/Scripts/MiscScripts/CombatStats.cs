@@ -60,7 +60,7 @@ public class CombatStats : MonoBehaviour
 			Destroy(gameObject);
 	}
 
-	void Start()
+	protected void Start()
 	{
 		// Health can start as a non-full value, but if it is unset, default to max health.
 		if (currentHealth == 0)
