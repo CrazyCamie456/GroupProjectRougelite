@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: 962189e923f43ea4fbc19324c9c326b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1322415628981661104
+    second: WizardRunSpriteSheet_0
+  - first:
+      213: 3673041286777533361
+    second: WizardRunSpriteSheet_1
+  - first:
+      213: 6934149940315269909
+    second: WizardRunSpriteSheet_2
+  - first:
+      213: 7091447884383255620
+    second: WizardRunSpriteSheet_3
+  - first:
+      213: -8755892168232673112
+    second: WizardRunSpriteSheet_4
+  - first:
+      213: 6449183502506829063
+    second: WizardRunSpriteSheet_5
+  - first:
+      213: 8745775426165009966
+    second: WizardRunSpriteSheet_6
+  - first:
+      213: 2518280122155381317
+    second: WizardRunSpriteSheet_7
+  - first:
+      213: 7604640149800942955
+    second: WizardRunSpriteSheet_8
+  - first:
+      213: 6468478509087897615
+    second: WizardRunSpriteSheet_9
+  - first:
+      213: 8893704272038719184
+    second: WizardRunSpriteSheet_10
+  - first:
+      213: -8822004758875250940
+    second: WizardRunSpriteSheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0529f1dedf5d5ade0800000000000000
+      internalID: -1322415628981661104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 500
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3f7b7f69349f230800000000000000
+      internalID: 3673041286777533361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 500
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ba9cbc1ac0b3060800000000000000
+      internalID: 6934149940315269909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 500
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cfbdb5742e96260800000000000000
+      internalID: 7091447884383255620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a0edd4b672dc7680800000000000000
+      internalID: -8755892168232673112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 250
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705aa3ee93a108950800000000000000
+      internalID: 6449183502506829063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 250
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ee7e9b96c3f5970800000000000000
+      internalID: 8745775426165009966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 250
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542bffdbd6ab2f220800000000000000
+      internalID: 2518280122155381317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dfe85dceb198960800000000000000
+      internalID: 7604640149800942955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08be6bbee6a4c950800000000000000
+      internalID: 6468478509087897615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0deed302ae8cc6b70800000000000000
+      internalID: 8893704272038719184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WizardRunSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 170
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f5f6ca961f19580800000000000000
+      internalID: -8822004758875250940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

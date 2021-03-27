@@ -9,6 +9,7 @@ public class AggroWalk : MonoBehaviour
     private EnemyRangedAiPathHelper pathHelper;
     private AIPath rb;
     private SpriteRenderer sprite;
+    private Transform spearBag;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class AggroWalk : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         pathHelper = gameObject.GetComponentInParent<EnemyRangedAiPathHelper>();
+        spearBag = transform.GetChild(0);
 
     }
 
@@ -28,9 +30,15 @@ public class AggroWalk : MonoBehaviour
         else anim.SetTrigger("PlayerDead");
 
         if (rb.velocity.x < 0)
+        {
             sprite.flipX = true;
+            spearBag.localPosition = new Vector3(0.5f, spearBag.localPosition.y, spearBag.localPosition.z);
+        }
 
         if (rb.velocity.x > 0)
+        {
             sprite.flipX = false;
+            spearBag.localPosition = new Vector3(-0.5f, spearBag.localPosition.y, spearBag.localPosition.z);
+        }
     }
 }

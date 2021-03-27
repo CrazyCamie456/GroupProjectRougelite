@@ -19,7 +19,7 @@ public class ChargedAttacks : MonoBehaviour
     private CombatStats combatStats;
     public float setAttackDelay;
     private float attackDelay = 0.0f;
-    bool isCharging = false;
+    [HideInInspector] public bool isCharging = false;
     void Start()
     {
         player = GameObject.Find("Player");
