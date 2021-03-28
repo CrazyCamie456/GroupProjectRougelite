@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class GameScenes
 {
-    enum ByID
+    public enum ByID
 	{
 		titleScreen		 = 0,
 		inGame,			// 1
