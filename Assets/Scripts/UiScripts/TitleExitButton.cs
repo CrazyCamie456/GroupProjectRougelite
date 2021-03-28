@@ -4,14 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TitleExitButton : MonoBehaviour
 {
-    public Button exitButton;
-    void Start()
-    {
-        Button btn = exitButton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
-    }
-
-    void TaskOnClick()
+    public void TaskOnClick()
     {
         Application.Quit();
     }
