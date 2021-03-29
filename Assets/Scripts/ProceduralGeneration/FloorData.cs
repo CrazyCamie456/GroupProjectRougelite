@@ -170,7 +170,7 @@ public class FloorData : MonoBehaviour
 			newRoomRoomData.AddDoor(newRoom.transform, selectedDoorLocation, attachedTo.Item2);
 
 			// Add room to rooms list
-			rooms.Add(new Tuple<GameObject,RoomData>(newRoom, newRoomRoomData));
+			rooms.Add(new Tuple<GameObject, RoomData>(newRoom, newRoomRoomData));
 
 			// Return new room
 			newRoomRoomData.roomSpacePosition = nextRoomPos;
@@ -298,14 +298,14 @@ public class FloorData : MonoBehaviour
 		noOfRoomsBeforeBoss--;
 		noOfRooms--;
 		RoomData srRd = startingRoom.GetComponent<RoomData>();
-		rooms.Add(new Tuple<GameObject,RoomData>(startingRoom, srRd));
+		rooms.Add(new Tuple<GameObject, RoomData>(startingRoom, srRd));
 		srRd.roomSpacePosition = Vector2Int.zero;
 		roomSpacePositions.Add(Vector2Int.zero);
 
 		// Build a line of rooms leading to the boss, these will be branched off from later.
 		while (noOfRoomsBeforeBoss > 1)
 		{
-			CreateNewRoom(rooms[rooms.Count-1]);
+			CreateNewRoom(rooms[rooms.Count - 1]);
 
 			noOfRoomsBeforeBoss--;
 			noOfRooms--;
@@ -316,7 +316,7 @@ public class FloorData : MonoBehaviour
 		bool success = false;
 		while (!success)
 		{
-			success = CreateNewRoom(rooms[rooms.Count-1], new Tuple<GameObject, RoomData>(bossRoom, bossRoomRoomData));
+			success = CreateNewRoom(rooms[rooms.Count - 1], new Tuple<GameObject, RoomData>(bossRoom, bossRoomRoomData));
 			if (success)
 				rooms[rooms.Count - 1].Item1.name = "BossRoom";
 
@@ -336,15 +336,41 @@ public class FloorData : MonoBehaviour
 
 		while (noOfRooms > 0)
 		{
+			// If a random number is less than the amount of special rooms left / the number of rooms left.
+			bool spawnSpecialRoom = UnityEngine.Random.Range(0.0f, 0.999f) < (specialRooms.Count / noOfRooms);
 			success = false;
-			while (!success)
+
+			int tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+			while (rooms[tentativeRoom].Item1.name == "BossRoom")
+				tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+
+			if (spawnSpecialRoom)
 			{
-				int tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
-				while (rooms[tentativeRoom].Item1.name == "BossRoom")
+				int whichIndex = UnityEngine.Random.Range(0, specialRooms.Count);
+				GameObject specialRoom = InstantiateRoom(Resources.Load("SpecialRooms/" + specialRooms[whichIndex]), new Vector2(0.0f, 0.0f));
+				RoomData specialRoomRD = specialRoom.GetComponent<RoomData>();
+				while (!success)
 				{
+					Tuple<GameObject, RoomData> rd = new Tuple<GameObject, RoomData>(specialRoom, specialRoomRD);
+					success = CreateNewRoom(rooms[tentativeRoom], rd);
+					if (success)
+						specialRooms.RemoveAt(whichIndex);
+
+					// Select new room to attempt to build off of - in case something has gone wrong.
 					tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+					while (rooms[tentativeRoom].Item1.name == "BossRoom")
+						tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
 				}
-				success = CreateNewRoom(rooms[tentativeRoom]);
+			}
+			else
+			{
+				while (!success)
+				{
+					success = CreateNewRoom(rooms[tentativeRoom]);
+					tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+					while (rooms[tentativeRoom].Item1.name == "BossRoom")
+						tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+				}
 			}
 			noOfRooms--;
 		}

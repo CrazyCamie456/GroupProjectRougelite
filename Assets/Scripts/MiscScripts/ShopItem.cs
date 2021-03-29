@@ -20,10 +20,20 @@ public class ShopItem : MonoBehaviour
 		bc.enabled = pcs.currency >= cost;
 	}
 
+	void OnEnable()
+	{
+		UpdateLock();
+	}
+
 	void UpdateLock()
     {
 		bc.enabled = pcs.currency >= cost;
     }
+
+	void OnDestroy()
+	{
+		pcs.currencyUpdateManager -= UpdateLock;
+	}
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{

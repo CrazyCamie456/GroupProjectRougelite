@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class ResolutionSettingsUIController : MonoBehaviour
 {
 	Dropdown dd;
+	Toggle t;
 
 	private void Start()
 	{
 		dd = GameObject.Find("ResolutionDropdown").GetComponent<Dropdown>();
+		dd.SetValueWithoutNotify(PlayerPrefs.GetInt("Resolution"));
+		t = GameObject.Find("FullscreenToggle").GetComponent<Toggle>();
+		t.SetIsOnWithoutNotify(PlayerPrefs.GetInt("Fullscreen") == 1);
 	}
 
 	public static List<Vector2Int> resolutionOptions = new List<Vector2Int>() {

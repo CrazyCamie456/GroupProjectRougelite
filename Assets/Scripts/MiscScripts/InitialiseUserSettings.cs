@@ -15,5 +15,9 @@ public class InitialiseUserSettings : MonoBehaviour
 		);
 		ResolutionSettingsUIController.index = resolution;
 		ResolutionSettingsUIController.isFullscreen = fullscreen;
+
+		AkSoundEngine.SetRTPCValue("MasterVolume", PlayerPrefs.GetInt("MasterVolume"));
+		AkSoundEngine.SetRTPCValue("SFXVolume", PlayerPrefs.GetInt("SFXVolume"));
+		AkSoundEngine.SetRTPCValue("MusicVolume", PlayerPrefs.GetInt("MusicVolume"));
 	}
 }
