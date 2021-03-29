@@ -264,6 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750d5e31426df8e46a08b2fcdc10a506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitioner: {fileID: 349897488}
+  transitionTime: 1
 --- !u!1 &309350119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b7478ba117e8449828cf7692230720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitioner: {fileID: 349897488}
+  transitionTime: 1
 --- !u!1 &1800603524
 GameObject:
   m_ObjectHideFlags: 0
