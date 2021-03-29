@@ -8,6 +8,7 @@ public class ElementFireAttack : MonoBehaviour, IElementalAttack
 	GameObject fireballPrefab;
 	float projectileSpeed = 10.0f;
 	float attackSpeed = 2.0f;
+	int damage = 2;
 
 	void Start()
 	{
@@ -18,7 +19,7 @@ public class ElementFireAttack : MonoBehaviour, IElementalAttack
 	{
 		GameObject fireball = Instantiate(fireballPrefab, transform.position + (new Vector3(direction.x, direction.y, 0) * 0.4f), ProjectileHelperFunctions.RotateToFace(direction));
 		fireball.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
-		fireball.GetComponent<DamageOnCollision>().Initialise("Enemy", 2);
+		fireball.GetComponent<DamageOnCollision>().Initialise("Enemy", damage);
 		fireball.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
 		fireball.GetComponent<BurnTargetOnHit>().Initialise("Enemy", 10, 1.0f, 5.0f);
 	}
