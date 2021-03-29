@@ -51,7 +51,7 @@ public class Dash : MonoBehaviour
         //Left shift, space and the right face button
         float dashInput = playerController.Player.Dash.ReadValue<float>();
 
-        if (dashDelay > 0.0f)
+        if (dashDelay >= 0.0f)
         {
             dashDelay -= Time.deltaTime;
         }
@@ -65,6 +65,10 @@ public class Dash : MonoBehaviour
         //check if the player has a dash avaliable, is currently not dashing and is trying to dash and is not holding the dash button down from the previous dash
         if (dashLimit > 0 && dashDuration < 0.0f && dashInput > 0.0f && notHoldingDash)
         {
+
+            //Check if the player can dash over a pit
+
+
             //while the player dashes disable input
             playerMovement.isDashing = true;
             rb.velocity = playerMovement.movementDirection * dashSpeed;
@@ -90,6 +94,5 @@ public class Dash : MonoBehaviour
         {
             playerMovement.isDashing = false;
         }
-        Debug.Log(dashInput);
     }
 }
