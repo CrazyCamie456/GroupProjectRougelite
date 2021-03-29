@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -751590653981158626}
   - component: {fileID: 487861046443146558}
   - component: {fileID: 2965128342527691208}
-  - component: {fileID: 3601730652939642548}
+  - component: {fileID: -575370240754017193}
   m_Layer: 11
   m_Name: Bat
   m_TagString: Enemy
@@ -145,7 +145,7 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
---- !u!114 &3601730652939642548
+--- !u!114 &-575370240754017193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,14 +154,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5747908866711399763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0684c77e0ac19c47bc88d95ff9a1772, type: 3}
+  m_Script: {fileID: 11500000, guid: 0347b3252c3baa947886bd024a70185c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wiseevent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d969ad9294aba9746b512e6d9a0a63c9,
-      type: 2}
 --- !u!1 &5747908867523212769
 GameObject:
   m_ObjectHideFlags: 0
