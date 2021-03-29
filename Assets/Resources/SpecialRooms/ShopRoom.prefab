@@ -719,7 +719,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -870,7 +870,7 @@ MonoBehaviour:
   doors: []
   roomSize: 0
   roomSpacePosition: {x: 0, y: 0}
-  validDoorLocations: 
+  validDoorLocations: 0000000004000000080000000c0000001000000014000000
   doorLocations: 
 --- !u!114 &3843163219232757218
 MonoBehaviour:
@@ -958,7 +958,7 @@ Tilemap:
       - {fileID: 4423706387386738463, guid: 2b23c298afed9d148ac871eba000bc40, type: 3}
       - {fileID: -6623892894820683097, guid: 2b23c298afed9d148ac871eba000bc40, type: 3}
       - {fileID: -8350520821614929406, guid: 2b23c298afed9d148ac871eba000bc40, type: 3}
-      m_AnimationSpeed: 10.321633
+      m_AnimationSpeed: 10.613077
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 3, y: 1, z: 0}
@@ -973,7 +973,7 @@ Tilemap:
       - {fileID: 4423706387386738463, guid: 2b23c298afed9d148ac871eba000bc40, type: 3}
       - {fileID: -6623892894820683097, guid: 2b23c298afed9d148ac871eba000bc40, type: 3}
       - {fileID: -8350520821614929406, guid: 2b23c298afed9d148ac871eba000bc40, type: 3}
-      m_AnimationSpeed: 10.559344
+      m_AnimationSpeed: 10.796588
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -2451,7 +2451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -2693,7 +2693,7 @@ PrefabInstance:
     - target: {fileID: 3891095980548323230, guid: adef91f124324f442bca0cbff1e9bd4b,
         type: 3}
       propertyPath: cost
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4577324460315115670, guid: adef91f124324f442bca0cbff1e9bd4b,
         type: 3}
@@ -2783,7 +2783,7 @@ PrefabInstance:
     - target: {fileID: 3891095980548323230, guid: adef91f124324f442bca0cbff1e9bd4b,
         type: 3}
       propertyPath: cost
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4577324460315115670, guid: adef91f124324f442bca0cbff1e9bd4b,
         type: 3}
@@ -3195,6 +3195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthShopPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 436858715940484369, guid: d797228e691565740871d327fb5efff1,
+        type: 3}
+      propertyPath: cost
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 436858715940484371, guid: d797228e691565740871d327fb5efff1,
         type: 3}
       propertyPath: m_RootOrder
@@ -3263,7 +3268,7 @@ PrefabInstance:
     - target: {fileID: 436858717490323264, guid: d797228e691565740871d327fb5efff1,
         type: 3}
       propertyPath: m_text
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 436858717490323264, guid: d797228e691565740871d327fb5efff1,
         type: 3}
@@ -3323,7 +3328,7 @@ PrefabInstance:
     - target: {fileID: 436858717490323264, guid: d797228e691565740871d327fb5efff1,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 436858717490323264, guid: d797228e691565740871d327fb5efff1,
         type: 3}
