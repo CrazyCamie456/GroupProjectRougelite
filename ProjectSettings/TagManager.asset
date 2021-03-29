@@ -39,7 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - MinimapSprite
   m_SortingLayers:
   - name: Default
     uniqueID: 0
