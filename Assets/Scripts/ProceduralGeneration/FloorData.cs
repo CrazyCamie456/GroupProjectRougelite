@@ -339,7 +339,12 @@ public class FloorData : MonoBehaviour
 			success = false;
 			while (!success)
 			{
-				success = CreateNewRoom(rooms[UnityEngine.Random.Range(0, rooms.Count)]);
+				int tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+				while (rooms[tentativeRoom].Item1.name == "BossRoom")
+				{
+					tentativeRoom = UnityEngine.Random.Range(0, rooms.Count);
+				}
+				success = CreateNewRoom(rooms[tentativeRoom]);
 			}
 			noOfRooms--;
 		}
