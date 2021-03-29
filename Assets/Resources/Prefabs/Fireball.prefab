@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 997266266079833889}
   - component: {fileID: -4277397218268643283}
   - component: {fileID: -295092778310253454}
+  - component: {fileID: 8484166238673113050}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -293,3 +294,28 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &8484166238673113050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324877883640363963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43aa3e2576aea043bae54f0bebdbd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9072dba1cf7c94947af7356773e8d55f,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
