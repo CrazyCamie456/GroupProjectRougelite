@@ -14,7 +14,7 @@ public class LightFade : MonoBehaviour
         t = Time.time;
         lt = GetComponent<Light2D>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
