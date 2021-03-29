@@ -16,7 +16,7 @@ public class VictoryOnDestroy : MonoBehaviour
 	{
 		if (cs.currentHealth <= 0)
 		{
-			SceneManager.LoadScene(2);
+			SceneManager.LoadScene((int)GameScenes.ByID.victoryScreen);
 		}
 	}
 }

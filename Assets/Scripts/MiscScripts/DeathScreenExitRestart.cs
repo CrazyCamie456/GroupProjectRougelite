@@ -52,7 +52,7 @@ public class DeathScreenExitRestart : MonoBehaviour
 		if (playerController.Player.Escape.ReadValue<float>() > 0.5f)
 			Application.Quit();
 		if (playerController.Player.Dash.ReadValue<float>() > 0.5f)
-			SceneManager.LoadScene(0);
+			SceneManager.LoadScene((int)GameScenes.ByID.inGame);
 	}
 
 	public void onControlsChanged()
