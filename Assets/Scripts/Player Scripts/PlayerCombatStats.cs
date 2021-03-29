@@ -47,6 +47,6 @@ public class PlayerCombatStats : CombatStats
     void OnDestroy()
     {
         if (currentHealth <= 0)
-            SceneManager.LoadScene((int)GameScenes.ByID.deathScreen);
+            Camera.main.GetComponent<CameraSceneTransitionHandler>().PlayerDeathSceneTransition();
     }
 }
