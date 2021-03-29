@@ -8,7 +8,7 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 	GameObject airshotPrefab;
 	float projectileSpeed = 20.0f; //20.0f;
 	float attackSpeed = 7.5f;
-	int damage = 4;
+	int damage = 3;
 
 	void Start()
 	{

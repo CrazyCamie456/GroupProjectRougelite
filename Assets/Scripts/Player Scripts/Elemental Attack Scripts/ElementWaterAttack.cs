@@ -7,8 +7,8 @@ public class ElementWaterAttack : MonoBehaviour, IElementalAttack
 	// Compile time semi-static variables.
 	GameObject waterShotPrefab;
 	float projectileSpeed = 12.0f;
-	float attackSpeed = 1.25f;
-	int damage = 6;
+	float attackSpeed = 2.0f;
+	int damage = 8;
 
 	void Start()
 	{
