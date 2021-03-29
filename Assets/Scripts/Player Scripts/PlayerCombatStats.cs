@@ -44,6 +44,12 @@ public class PlayerCombatStats : CombatStats
         }
     }
 
+    public void SetIFrames(float iframe)
+    {
+        iFrames = iframe;
+        StartCoroutine(ReduceIFrames());
+    }
+
     void OnDestroy()
     {
         if (currentHealth <= 0)

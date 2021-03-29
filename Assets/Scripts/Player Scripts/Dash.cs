@@ -18,6 +18,8 @@ public class Dash : MonoBehaviour
     private float dashDuration;
     private float dashDelay;
 
+    private PlayerCombatStats combatStats;
+
     bool notHoldingDash = true;
 
     private void Awake()
@@ -25,7 +27,6 @@ public class Dash : MonoBehaviour
         playerController = new PlayerController();
         playerMovement = GetComponent<PlayerMovement>();
     }
-
     private void OnEnable()
     {
         playerController.Enable();
@@ -33,9 +34,12 @@ public class Dash : MonoBehaviour
     private void OnDisable()
     {
         playerController.Disable();
+
     }
     void Start()
     {
+        combatStats = GetComponent<PlayerCombatStats>();
+
         rb = GetComponent<Rigidbody2D>();
         dashDuration = maxDashDuration;
         dashDelay = maxDashDelay;
@@ -47,7 +51,7 @@ public class Dash : MonoBehaviour
         //Left shift, space and the right face button
         float dashInput = playerController.Player.Dash.ReadValue<float>();
 
-        if (dashDelay > 0.0f)
+        if (dashDelay >= 0.0f)
         {
             dashDelay -= Time.deltaTime;
         }
@@ -61,6 +65,10 @@ public class Dash : MonoBehaviour
         //check if the player has a dash avaliable, is currently not dashing and is trying to dash and is not holding the dash button down from the previous dash
         if (dashLimit > 0 && dashDuration < 0.0f && dashInput > 0.0f && notHoldingDash)
         {
+
+            //Check if the player can dash over a pit
+
+
             //while the player dashes disable input
             playerMovement.isDashing = true;
             rb.velocity = playerMovement.movementDirection * dashSpeed;
@@ -68,6 +76,7 @@ public class Dash : MonoBehaviour
             dashDuration = maxDashDuration;
             dashLimit--;
             notHoldingDash = false;
+            combatStats.SetIFrames(dashDuration);
         }
 
         //check if the player has released the dash button
@@ -85,7 +94,5 @@ public class Dash : MonoBehaviour
         {
             playerMovement.isDashing = false;
         }
-
-
     }
 }

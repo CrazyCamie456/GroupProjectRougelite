@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2604979310196752482}
   - component: {fileID: 2780930414160557402}
   - component: {fileID: 3891095980548323230}
+  - component: {fileID: 5625796939843448700}
   - component: {fileID: 7615134489480062499}
   m_Layer: 0
   m_Name: ItemForSale
@@ -96,6 +97,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 15
+--- !u!114 &5625796939843448700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577324460315115670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d264e3be53e3a44458343c9ee5318bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &7615134489480062499
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -35,6 +35,11 @@ public class ShopItem : MonoBehaviour
 		pcs.currencyUpdateManager -= UpdateLock;
 	}
 
+	void OnEnable()
+	{
+		UpdateLock();
+	}
+
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.name == "Player")
