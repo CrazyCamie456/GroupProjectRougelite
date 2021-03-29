@@ -11,7 +11,6 @@ public static class VolumeSettings
 	{
 		AkSoundEngine.SetRTPCValue("SFXVolume", newValue);
 		PlayerPrefs.SetInt("SFXVolume", (int)newValue);
-		Debug.Log("Stored SFX volume:" + newValue);
 	}
 	public static void ChangeMusicVolumeSetting(float newValue)
 	{
