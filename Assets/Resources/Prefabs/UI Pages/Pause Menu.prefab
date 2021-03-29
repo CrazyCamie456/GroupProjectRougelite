@@ -213,6 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916346873487077150}
+  - component: {fileID: 506477258}
   m_Layer: 0
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -239,6 +240,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &506477258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916346873487077137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87418e1ec6c9b7c48868bf702e89317c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1916346873520201088
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,12 +726,23 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1916346874797155178}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1916346874315221460}
+        m_MethodName: ChangeSFXVolumeSetting
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1916346873865099198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,14 +1633,14 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1916346873911158465}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 3970f485860338746a143c2d12581886, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1916346874315221460}
+        m_MethodName: ChangeMainVolumeSetting
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2583,12 +2607,23 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1916346875219889436}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1916346874315221460}
+        m_MethodName: ChangeMusicVolumeSetting
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!1 &1916346875314376624
 GameObject:
   m_ObjectHideFlags: 0
