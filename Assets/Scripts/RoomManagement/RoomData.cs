@@ -32,7 +32,9 @@ public class RoomData : MonoBehaviour
 
 	public void EnterRoom()
 	{
-		GetComponent<SpriteRenderer>().enabled = true;
+		TryGetComponent(out SpriteRenderer sr);
+		if (sr != null)
+			sr.enabled = true;
 		Transform[] temp = GetComponentsInChildren<Transform>(true);
 		foreach (Transform t in temp)
 		{
