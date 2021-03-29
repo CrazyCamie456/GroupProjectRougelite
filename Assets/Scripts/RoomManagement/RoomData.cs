@@ -155,7 +155,7 @@ public class RoomData : MonoBehaviour
 		else
 			Gizmos.color = Color.blue;
 		Vector3 pos = new Vector3(0.0f, 0.0f, 0.0f);
-		Vector3 size = new Vector3(15.9f, 8.9f, 0.0f);
+		Vector3 size = new Vector3(13.9f, 8.9f, 0.0f);
 		pos = roomSpacePosition * new Vector2(16.0f, 9.0f);
 		Gizmos.DrawWireCube(pos, size);
 
