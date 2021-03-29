@@ -8,6 +8,7 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 	GameObject airshotPrefab;
 	float projectileSpeed = 20.0f; //20.0f;
 	float attackSpeed = 7.5f;
+	int damage = 4;
 
 	void Start()
 	{
@@ -19,7 +20,7 @@ public class ElementAirAttack : MonoBehaviour, IElementalAttack
 		GameObject airshot = Instantiate(airshotPrefab, transform.position + (new Vector3(direction.x, direction.y, 0) * 0.4f), ProjectileHelperFunctions.RotateToFace(direction));
 		airshot.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
 		airshot.GetComponent<Rigidbody2D>().angularVelocity = 1440.0f;
-		airshot.GetComponent<DamageOnCollision>().Initialise("Enemy", 2);
+		airshot.GetComponent<DamageOnCollision>().Initialise("Enemy", damage);
 		airshot.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Enemy", "Wall" });
 	}
 

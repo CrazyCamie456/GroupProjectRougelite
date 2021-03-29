@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2165f7eedf46764b92a7a79f6c10a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 1
 --- !u!114 &8754138717888898296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setChargeAttackTime: 1
   spearSpeed: 6
+  damage: 1
 --- !u!114 &4436328179259928346
 MonoBehaviour:
   m_ObjectHideFlags: 0
