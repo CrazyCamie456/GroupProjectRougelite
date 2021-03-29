@@ -12,7 +12,7 @@ public class EnemyRangedAttack : MonoBehaviour
     public float setChargeAttackTime;
     private float chargeAttackTime = 0.0f;
     public float spearSpeed;
-
+    public int damage;
     private CombatStats combatStats;
 
     void Start()
@@ -41,7 +41,7 @@ public class EnemyRangedAttack : MonoBehaviour
 
 
                 GameObject enemySpear = Instantiate(spearPrefab, transform.position, ProjectileHelperFunctions.RotateToFace(aimDirection));
-                enemySpear.GetComponent<DamageOnCollision>().Initialise("Player", 2);
+                enemySpear.GetComponent<DamageOnCollision>().Initialise("Player", damage);
                 enemySpear.GetComponent<DestroySelfOnCollision>().Initialise(new List<string> { "Player", "Wall" });
                 enemySpear.GetComponent<Rigidbody2D>().velocity = aimDirection * spearSpeed;
 
