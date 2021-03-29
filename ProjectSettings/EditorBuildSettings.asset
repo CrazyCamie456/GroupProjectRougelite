@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/EmptyScene.unity
     guid: 2fcc1a28c976fed448f201c9c1fe8db8
   - enabled: 1
+    path: Assets/Resources/Scenes/SettingsTest.unity
+    guid: b84719f5e7725f445b59b3845702b6a8
+  - enabled: 1
     path: Assets/Resources/Scenes/BETA_DeathScreen.unity
     guid: 252e258befacf534982eef017a3b51ba
   - enabled: 1
