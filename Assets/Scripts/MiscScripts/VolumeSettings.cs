@@ -2,30 +2,20 @@
 
 public static class VolumeSettings
 {
-	public static int sfxVolume = 100;
-	public static int musicVolume = 100;
-
-	[SerializeField] private static int pMainVolume;
-	[SerializeField] private static int pSfxVolume;
-	[SerializeField] private static int pMusicVolume;
-
 	public static void ChangeMainVolumeSetting(float newValue)
 	{
-		pMainVolume = (int)newValue;
-		sfxVolume = pMainVolume * pSfxVolume;
-		musicVolume = pMainVolume * pMusicVolume;
-		PlayerPrefs.SetInt("MainVolume", (int)newValue);
+		AkSoundEngine.SetRTPCValue("MasterVolume", newValue);
+		PlayerPrefs.SetInt("MasterVolume", (int)newValue);
 	}
 	public static void ChangeSFXVolumeSetting(float newValue)
 	{
-		pSfxVolume = (int)newValue;
-		sfxVolume = pMainVolume * pSfxVolume;
+		AkSoundEngine.SetRTPCValue("SFXVolume", newValue);
 		PlayerPrefs.SetInt("SFXVolume", (int)newValue);
+		Debug.Log("Stored SFX volume:" + newValue);
 	}
 	public static void ChangeMusicVolumeSetting(float newValue)
 	{
-		pMusicVolume = (int)newValue;
-		musicVolume = pMainVolume * pMusicVolume;
+		AkSoundEngine.SetRTPCValue("MusicVolume", newValue);
 		PlayerPrefs.SetInt("MusicVolume", (int)newValue);
 	}
 }

@@ -52,6 +52,7 @@ public class PauseHandler : MonoBehaviour
 					Time.timeScale = 1.0f;
 					SetEnabledOnAllChildren(false);
 					isPauseMenuUp = false;
+					PlayerPrefs.Save();
 				} else
 				{
 					Time.timeScale = 0.0f;
