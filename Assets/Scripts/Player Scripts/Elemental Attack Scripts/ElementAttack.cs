@@ -31,6 +31,7 @@ public class ElementAttack : MonoBehaviour
 
 	PlayerMovement playerMovement;
 	PlayerController playerController;
+	CombatStats cs;
 
 	private void Awake()
 	{
@@ -48,6 +49,7 @@ public class ElementAttack : MonoBehaviour
 
 	void Start()
 	{
+		cs = GetComponent<CombatStats>();
 		playerMovement = GetComponent<PlayerMovement>();
 		elements = new List<Element>();
 		for (int i = 0; i < DEBUG_MAX_ELEMENTS; i++)
@@ -116,17 +118,21 @@ public class ElementAttack : MonoBehaviour
 
 	void Update()
 	{
-		fireDelay = 1.0f / baseAttackSpeed;
-
-		// If the attack button is down, and the player is aiming in any direction, and the players attack is off cooldown.
-		if (playerController.Player.Attack.ReadValue<float>() > 0.5f &&
-			(Mathf.Abs(playerMovement.directionAiming.x) > 0.1f || Mathf.Abs(playerMovement.directionAiming.y) > 0.1f)
-			&& currDelay <= 0.0f)
+		float totalAttackSpeed = baseAttackSpeed * (1 + cs.bonusAttackSpeed);
+		if (totalAttackSpeed > 0.0f)
 		{
-			currDelay = fireDelay;
-			elementalAttack.Attack(playerMovement.directionAiming);
+			fireDelay = 1.0f / totalAttackSpeed;
+
+			// If the attack button is down, and the player is aiming in any direction, and the players attack is off cooldown.
+			if (playerController.Player.Attack.ReadValue<float>() > 0.5f &&
+				(Mathf.Abs(playerMovement.directionAiming.x) > 0.1f || Mathf.Abs(playerMovement.directionAiming.y) > 0.1f)
+				&& currDelay <= 0.0f)
+			{
+				currDelay = fireDelay;
+				elementalAttack.Attack(playerMovement.directionAiming);
+			}
+			currDelay -= Time.deltaTime;
 		}
-		currDelay -= Time.deltaTime;
 
 		//DEBUG SWAP ELEMENT
 		if (playerController.Player.Debug_1.ReadValue<float>() > 0.5f)
