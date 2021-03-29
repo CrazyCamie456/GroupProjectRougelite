@@ -349,6 +349,8 @@ public class FloorData : MonoBehaviour
 			noOfRooms--;
 		}
 
+		AstarPath.active.Scan();
+
 		// @TODO: Link some created rooms to each other, if not already linked - create more possible paths through a floor.
 	}
 }
