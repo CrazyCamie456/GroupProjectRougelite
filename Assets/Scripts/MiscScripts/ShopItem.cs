@@ -20,6 +20,11 @@ public class ShopItem : MonoBehaviour
 		bc.enabled = pcs.currency >= cost;
 	}
 
+	void OnEnable()
+	{
+		UpdateLock();
+	}
+
 	void UpdateLock()
     {
 		bc.enabled = pcs.currency >= cost;
