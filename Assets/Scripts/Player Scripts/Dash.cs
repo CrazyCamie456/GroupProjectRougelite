@@ -18,6 +18,8 @@ public class Dash : MonoBehaviour
     private float dashDuration;
     private float dashDelay;
 
+    private PlayerCombatStats combatStats;
+
     bool notHoldingDash = true;
 
     private void Awake()
@@ -25,7 +27,6 @@ public class Dash : MonoBehaviour
         playerController = new PlayerController();
         playerMovement = GetComponent<PlayerMovement>();
     }
-
     private void OnEnable()
     {
         playerController.Enable();
@@ -33,9 +34,12 @@ public class Dash : MonoBehaviour
     private void OnDisable()
     {
         playerController.Disable();
+
     }
     void Start()
     {
+        combatStats = GetComponent<PlayerCombatStats>();
+
         rb = GetComponent<Rigidbody2D>();
         dashDuration = maxDashDuration;
         dashDelay = maxDashDelay;
@@ -68,6 +72,7 @@ public class Dash : MonoBehaviour
             dashDuration = maxDashDuration;
             dashLimit--;
             notHoldingDash = false;
+            combatStats.SetIFrames(dashDuration);
         }
 
         //check if the player has released the dash button
@@ -85,7 +90,6 @@ public class Dash : MonoBehaviour
         {
             playerMovement.isDashing = false;
         }
-
-
+        Debug.Log(dashInput);
     }
 }
