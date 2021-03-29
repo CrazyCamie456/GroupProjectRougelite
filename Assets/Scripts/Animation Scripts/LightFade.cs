@@ -23,6 +23,6 @@ public class LightFade : MonoBehaviour
 
     void LightFader()
     {
-        lt.intensity = Mathf.Lerp(0.01f, 1, (Time.time - t) / 10);
+        lt.intensity = Mathf.Lerp(0.01f, 1, (Time.time - t) /10);
     }
 }
