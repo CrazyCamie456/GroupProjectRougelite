@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 34e0cbddbe1fd5469200e6918afd23c6
     GuidInternal: 
-    m_lastTime: -8585870156027584407
+    m_lastTime: -8585846115794775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 334237adbf4dfc4b99b10db20ae7e79c
     GuidInternal: 
-    m_lastTime: -8585870155989140832
+    m_lastTime: -8585846116094775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -41,6 +41,28 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 853b4036551ffa4abaf19d8194658cf8
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Music
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Music
+    - name: SFX
+      guid: 09af3bcc52f1304ab30246e40adfa3ea
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SFX
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -49,7 +71,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 20a0907f8b27dd43b86024c028cd8259
     GuidInternal: 
-    m_lastTime: -8585870155998441036
+    m_lastTime: -8585846116074775808
     List:
     - name: Ambience
       guid: c580a5809610b4478fc585f094fc4e4a
@@ -78,6 +100,24 @@ MonoBehaviour:
       - ElementName: Enemies
         ObjectType: 7
       Path: Default Work Unit\Enemies
+    - name: Misc
+      guid: 28ed0d0b6199744e854197328e8f53f5
+      id: 3062523257
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Misc
+        ObjectType: 7
+      Path: Default Work Unit\Misc
+    - name: Music
+      guid: 14be0ec21cab5646a6984eb5526e1f22
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 7
+      Path: Default Work Unit\Music
     - name: Spells
       guid: 79d6ebc7e8e25641b1fec8b17047c8bd
       id: 4160437992
@@ -97,7 +137,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Ambience
     guid: 0145036126bceb4ab58872b0af928641
     GuidInternal: 
-    m_lastTime: -8585870156023470349
+    m_lastTime: -8585846116114775808
     List:
     - name: Play_Cave_Ambience
       guid: c8af46632b14b34b87a1901ea4cee698
@@ -110,6 +150,34 @@ MonoBehaviour:
       - ElementName: Play_Cave_Ambience
         ObjectType: 3
       Path: Default Work Unit\Ambience\Play_Cave_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Fire_Extinguish
+      guid: 057584fa10d65e459d9b89c8c6696bc3
+      id: 2183157753
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Fire_Extinguish
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\Play_Fire_Extinguish
+      maxAttenuation: 0
+      maxDuration: 1.510567
+      minDuration: 1.32
+    - name: Play_Fire_Loop
+      guid: edfda3a30b4c744f909c9718f22eac9f
+      id: 1779335
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Play_Fire_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\Play_Fire_Loop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -127,6 +195,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Fire_Loop
+      guid: 10558f5dbd92ba44a21a2d0a52c0bbc2
+      id: 1844146061
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Stop_Fire_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Ambience\Stop_Fire_Loop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Bat.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
@@ -138,7 +220,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy\Bat
     guid: 3598b4694572c148808549e983909b1b
     GuidInternal: 
-    m_lastTime: -8585870156024028858
+    m_lastTime: -8585846116114775808
     List:
     - name: Play_Bat_Death
       guid: a6e78b0784a60b4ca8b5f716583b7d72
@@ -213,8 +295,36 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Character
     guid: 9b3304f090732043875a076121eac862
     GuidInternal: 
-    m_lastTime: -8585870156024308109
+    m_lastTime: -8585846116114775808
     List:
+    - name: Play_Character_Death
+      guid: a425045c1e86c549b160501e41275284
+      id: 1087513048
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character
+        ObjectType: 12
+      - ElementName: Play_Character_Death
+        ObjectType: 3
+      Path: Default Work Unit\Character\Play_Character_Death
+      maxAttenuation: 0
+      maxDuration: 1.341202
+      minDuration: 0.978571
+    - name: Play_Character_Hit
+      guid: 37200b929ec86a438c276af8564bd1ce
+      id: 3287836281
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Character
+        ObjectType: 12
+      - ElementName: Play_Character_Hit
+        ObjectType: 3
+      Path: Default Work Unit\Character\Play_Character_Hit
+      maxAttenuation: 0
+      maxDuration: 0.837324
+      minDuration: 0.463492
     - name: Play_Footstep
       guid: 84876a6562ab02449baa4c6fa44173f0
       id: 1602358412
@@ -236,7 +346,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 24988347e32c9f43a570031f0a04915b
     GuidInternal: 
-    m_lastTime: -8585870156023609978
+    m_lastTime: -8585846116114775808
     List: []
   - PhysicalPath: Events\Enemy.wwu
     PathAndIcons:
@@ -247,7 +357,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy
     guid: 6687ed9f2bb3a24f8dee519a9b8a23d4
     GuidInternal: 
-    m_lastTime: -8585870156023879257
+    m_lastTime: -8585846116114775808
     List: []
   - PhysicalPath: Events\Fishman.wwu
     PathAndIcons:
@@ -260,7 +370,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy\Fishman
     guid: 1a9db7c9ce8443429ba77b7e7ecd45b7
     GuidInternal: 
-    m_lastTime: -8585870156024168484
+    m_lastTime: -8585846116114775808
     List:
     - name: Play_Fishman_Death
       guid: 33d979669e06454699858bff1f761ddc
@@ -310,6 +420,154 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.53127
       minDuration: 0.5
+  - PhysicalPath: Events\Misc.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Misc
+      ObjectType: 12
+    ParentPath: Default Work Unit\Misc
+    guid: b9ba1b213dc0494c8c121f954dc6556b
+    GuidInternal: 
+    m_lastTime: -8585846116094775808
+    List:
+    - name: Play_Currency_Pickup
+      guid: 2b6dcdea3f52f04fbdf8cefeb5e4a92b
+      id: 2524235254
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Misc
+        ObjectType: 12
+      - ElementName: Play_Currency_Pickup
+        ObjectType: 3
+      Path: Default Work Unit\Misc\Play_Currency_Pickup
+      maxAttenuation: 0
+      maxDuration: 0.616009
+      minDuration: 0.581338
+    - name: Play_Door_Close
+      guid: 203785e2fc5b8b4f8081108588814658
+      id: 2292458263
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Misc
+        ObjectType: 12
+      - ElementName: Play_Door_Close
+        ObjectType: 3
+      Path: Default Work Unit\Misc\Play_Door_Close
+      maxAttenuation: 0
+      maxDuration: 0.610684
+      minDuration: 0.610684
+    - name: Play_Door_Open
+      guid: d4a189cb4c1a854bb98e9937fccf72d4
+      id: 1660008929
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Misc
+        ObjectType: 12
+      - ElementName: Play_Door_Open
+        ObjectType: 3
+      Path: Default Work Unit\Misc\Play_Door_Open
+      maxAttenuation: 0
+      maxDuration: 0.378685
+      minDuration: 0.378685
+  - PhysicalPath: Events\Music.wwu
+    PathAndIcons:
+    - ElementName: Default Work Unit
+      ObjectType: 12
+    - ElementName: Music
+      ObjectType: 12
+    ParentPath: Default Work Unit\Music
+    guid: 6d68be82368aa248a9713936d590abc4
+    GuidInternal: 
+    m_lastTime: -8585846116094775808
+    List:
+    - name: Play_Cave_Music
+      guid: 8802c07bcaec374e9b0380ee9a52ce70
+      id: 2787455125
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Cave_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_Cave_Music
+      maxAttenuation: 0
+      maxDuration: 163.69365
+      minDuration: 163.69365
+    - name: Play_Shop_Music
+      guid: 723fc99e06cb8e4394cf973c7e267100
+      id: 186839574
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Shop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_Shop_Music
+      maxAttenuation: 0
+      maxDuration: 64.98159
+      minDuration: 64.98159
+    - name: Play_Title_Music
+      guid: dc5391b80fe9dd47935697f46638c4a6
+      id: 2604896900
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Play_Title_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_Title_Music
+      maxAttenuation: 0
+      maxDuration: 164
+      minDuration: 164
+    - name: Stop_Cave_Music
+      guid: 0b1680f95497b7418921ccb75374a5ca
+      id: 4264999239
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_Cave_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Stop_Cave_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Shop_Music
+      guid: 27a0e9b4946a5247a9a8a4278202dd1a
+      id: 2155562184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_Shop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Stop_Shop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Title_Music
+      guid: 2dcf8de48af13744bc81133bb3e337ea
+      id: 1607711242
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 12
+      - ElementName: Stop_Title_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Stop_Title_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Slime.wwu
     PathAndIcons:
     - ElementName: Default Work Unit
@@ -321,8 +579,24 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Enemy\Slime
     guid: b022f852096346448f504cdd8e137ec2
     GuidInternal: 
-    m_lastTime: -8585870156024447737
+    m_lastTime: -8585846116094775808
     List:
+    - name: Play_Slime_Attack
+      guid: 1db7256f0851f94883c43f990ae6aae0
+      id: 2907964801
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 12
+      - ElementName: Slime
+        ObjectType: 12
+      - ElementName: Play_Slime_Attack
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\Slime\Play_Slime_Attack
+      maxAttenuation: 0
+      maxDuration: 0.325624
+      minDuration: 0.325624
     - name: Play_Slime_Death
       guid: b4141b31a33b734e93cae1160ecb4229
       id: 2068608165
@@ -396,7 +670,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit\Spells
     guid: 7c4c131c297d0d45bcd5e566f3bee65c
     GuidInternal: 
-    m_lastTime: -8585870156023739631
+    m_lastTime: -8585846116094775808
     List:
     - name: Play_Air_Spell
       guid: 3ffd5bfcfab763489b27e5e48214d812
@@ -452,8 +726,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Spells\Play_Water_Spell
       maxAttenuation: 0
-      maxDuration: 1.75
-      minDuration: 1.738095
+      maxDuration: 0.75
+      minDuration: 0.59375
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -462,8 +736,50 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 06afed215c4bd447a21b2d67a0b58d80
     GuidInternal: 
-    m_lastTime: -8585870156024956375
-    List: []
+    m_lastTime: -8585846116094775808
+    List:
+    - name: MasterVolume
+      guid: f0f1c26d461bda438d543e8ec0bbc08b
+      id: 2918011349
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Volume
+        ObjectType: 4
+      - ElementName: MasterVolume
+        ObjectType: 13
+      Path: Default Work Unit\Volume\MasterVolume
+    - name: MusicVolume
+      guid: 5570799de824d54490a320dcb60b763b
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Volume
+        ObjectType: 4
+      - ElementName: MusicVolume
+        ObjectType: 13
+      Path: Default Work Unit\Volume\MusicVolume
+    - name: SFXVolume
+      guid: 866a11e97b77fe44908ffa59bfc76f38
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Volume
+        ObjectType: 4
+      - ElementName: SFXVolume
+        ObjectType: 13
+      Path: Default Work Unit\Volume\SFXVolume
+    - name: Volume
+      guid: b82316efe931b440a7e2fd1103c118ec
+      id: 2415836739
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Volume
+        ObjectType: 4
+      Path: Default Work Unit\Volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -472,7 +788,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7ad306cb799cc149b70af9a6c2220767
     GuidInternal: 
-    m_lastTime: -8585870156027240271
+    m_lastTime: -8585846115794775808
     List:
     - name: Air
       guid: 42b892d2c2cf2640922d833d50f56aeb
@@ -558,7 +874,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 614e5fce97881a42810ab87ded40d9ec
     GuidInternal: 
-    m_lastTime: -8585870156003662482
+    m_lastTime: -8585846115794775808
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -568,13 +884,12 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 30f370857cc6034690f0c7fdd61e959d
     GuidInternal: 
-    m_lastTime: -8585870156027070725
+    m_lastTime: -8585846115794775808
     List: []
   ExpandedItems:
   - /Group Project Wwise Session
   - /Group Project Wwise Session/Events
   - /Group Project Wwise Session/Events/Default Work Unit
   - /Group Project Wwise Session/Events/Default Work Unit/Ambience
-  - /Group Project Wwise Session/Events/Default Work Unit/Character
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
