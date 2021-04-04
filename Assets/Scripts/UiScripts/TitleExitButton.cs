@@ -16,4 +16,8 @@ public class TitleExitButton : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         Application.Quit();
     }
+	private void Start()
+	{
+		transitioner = GameObject.Find("Crossfade To Black").GetComponentInChildren<Animator>();
+	}
 }
